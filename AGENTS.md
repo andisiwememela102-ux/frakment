@@ -61,12 +61,12 @@ Do not edit files under `content/docs/` with PowerShell 5.1 string replacement. 
 ## Agent resources
 
 - Skill: `skills/frakment-usage/SKILL.md` for discovering, fetching, and installing components
-- Registry index: `https://frakment.vercel.app/r/index.json`
+- Registry index: `https://www.arrafi.dev/frakment/r/index.json`
 - MCP server: `npx -y @frakment/mcp` with tools `list_components`, `view_component`, `search_components`, `get_install_command`, `list_scenarios`, `compose`
-- Full agent docs: `https://frakment.vercel.app/llms.txt`
+- Full agent docs: `https://www.arrafi.dev/frakment/llms.txt`
 
 ## Never
 
-- Never mention internal notes, scratch files, or admin-only documents in user-facing files.
+- Never mention internal notes, scratch files, or maintainer docs in user-facing files.
 - Never document a component that is not shipped.
 - Never skip the pre-commit checks.
