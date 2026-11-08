@@ -89,6 +89,8 @@ A merged pull request satisfies the commercial-use requirement in the license.
 
 ## License
 
+See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for upstream attributions.
+
 Source-available. Free for personal and educational use. Commercial use requires one qualifying contribution — see [LICENSE](./LICENSE) Section 4.
 
 Attribution required — see [ATTRIBUTION.md](./ATTRIBUTION.md).
