@@ -9,8 +9,8 @@
 
 **The Fragments behind your Design System.**
 
-Composable, accessible, customizable — nothing to assemble.<br/>
-With AI and motion. No wiring. No configuration.
+Composable, accessible, customizable — inherently reusable.<br/>
+One-time setup. Built in AI and motion. Minimal configuration.
 
 [![License](https://img.shields.io/badge/license-source--available-blue?style=for-the-badge)](LICENSE)
 [![npm](https://img.shields.io/npm/v/frakment?style=for-the-badge&color=000)](https://www.npmjs.com/package/frakment)
@@ -22,41 +22,38 @@ With AI and motion. No wiring. No configuration.
 
 ---
 
-**Frakment** is a component registry for React interfaces. Every component is standalone — depends only on a small set of well-known libraries, and ships as open source you can read, copy, and modify.
+**Frakment** is a component registry for React interfaces. Every component ships as source you copy into your project - depends only on a small set of well-known libraries, and stays yours to edit.
 
 ## Highlights
 
-**Standalone by default** — one file per component. No wrapper, no chain, no hidden dependency tree.
+**Installable via CLI** - `npx frakment add <name>` fetches the component and every registry dependency it needs. Files land in your repo, fully editable.
 
-**AI and motion, built in** — agent surfaces ship with AI support and motion resolved per file. Baseline primitives stay motion-ready without extra setup.
+**AI and motion, built in** - chat, agent, and reasoning primitives ship with AI support and Motion. Baseline primitives stay motion-ready without extra setup.
 
-**Built for agents** — MCP server and Agent Skills let tools discover, fetch, and install components autonomously.
+**Built for agents** - MCP server and Agent Skills let tools discover, fetch, and install components autonomously.
 
-**Copy-paste first** — one command installs a component plus its registry dependencies.
+**You own the source** - every component lands as source in your repo. Edit it, upgrade it, or leave it - no hidden dependency tree to debug.
 
 ## Components
 
-| Category | Components |
-| :--- | :--- |
-| **Chat** | Bubble · Message · Attachment |
-| **Agent** | Trace · Chain of Thought |
-| **Code** | Code Block |
-| **Status** | Marker · Spinner · Pulse · Pulse Status |
-| **Forms** | Input · Textarea · Field · Label · Checkbox · Switch · Select |
-| **Layout** | Item · Separator · Card · Input Group · Empty |
-| **Controls** | Button · Badge · Toggle · Toggle Group |
-| **Identity** | Avatar |
+46 components across three surfaces.
 
-Browse the full catalog → **[www.arrafi.dev/frakment/docs/components](https://www.arrafi.dev/frakment/docs/components)**
+**Base** - Accordion, Avatar, Badge, Breadcrumb, Button, Button Group, Card, Checkbox, Collapsible, Code Block, Dialog, Dropdown Menu, Empty, Field, Hover Card, Input, Input Group, Input OTP, Item, Label, Marker, Pagination, Progress, Radio Group, Select, Separator, Sheet, Slider, Sonner, Spinner, Switch, Tabs, Textarea, Toggle, Toggle Group, Tooltip.
+
+**AI Elements** - Attachment, Bubble, Message, Message Animated, Message Scroller, Trace.
+
+**Modules** - Questionnaire, Pulse, Shimmer, Text Morph.
+
+Browse the full catalog: **[www.arrafi.dev/frakment/docs/components](https://www.arrafi.dev/frakment/docs/components)**
 
 ## Quick start
 
 ```bash
-npx frakment@latest init
-npx frakment@latest add bubble
+npx frakment@latest init      # once per project
+npx frakment@latest add button
 ```
 
-`add` fetches the component and its registry dependencies, writes the files, and installs any missing npm packages.
+`init` sets up `components.json`, injects the theme block into `globals.css`, and installs base dependencies. `add` fetches a component plus every registry dependency it needs. Run `add` again for each new component.
 
 ## Built for agents
 

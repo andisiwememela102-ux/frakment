@@ -20,8 +20,8 @@ export default function IndexPage() {
             </h1>
 
             <p className="text-muted-foreground max-w-md text-sm leading-tight text-pretty">
-              Composable, accessible, customizable — nothing to assemble. With
-              AI and motion. No wiring. No configuration.
+              Composable, accessible, customizable — inherently reusable.
+              One-time setup. Built in AI and motion. Minimal configuration.
             </p>
 
             <CommandBox className="mt-4 w-full max-w-xl" />
