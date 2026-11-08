@@ -25,6 +25,13 @@ pre-commit:
         - "examples/**"
         - "frakment.json"
 
+    - name: registry-audit
+      run: npm run registry:audit
+      glob:
+        - "registry/**"
+        - "components/ui/**"
+        - "frakment.json"
+
 pre-push:
   parallel: false
   jobs:

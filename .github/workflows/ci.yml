@@ -75,6 +75,9 @@ jobs:
           fi
           echo "Registry artifacts are in sync with source."
 
+      - name: Registry audit
+        run: npm run registry:audit
+
   theme-drift:
     runs-on: ubuntu-latest
     steps:
@@ -112,3 +115,16 @@ jobs:
 
       - name: Audit package signatures
         run: npm audit signatures
+
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Gitleaks scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
