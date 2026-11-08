@@ -83,3 +83,9 @@ _node_modules_old
 
 # Dependencies (all workspaces)
 **/node_modules/
+
+# Maintainer ops - moved to arrafipd/frakment-dev
+HANDOFF.md
+HANDOFF.archive/
+CLAUDE.md
+.cursor/
