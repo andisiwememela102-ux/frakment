@@ -190,9 +190,9 @@ Run this whenever the homepage layout, hero copy, or theme changes. Commit both 
 
 ## Adding a new docs section
 
-Add the section in two places, in the same order: `TOP_LEVEL_SECTIONS` in `lib/docs.ts` and `pages` in `content/docs/meta.json`. Also add the route in `constants/routes.ts`.
+Sections come from two sources: manual groups in `SECTION_GROUPS` (in `lib/docs.ts`) and auto-discovered folders from the page tree. Add manual sections to `SECTION_GROUPS`, then register the folder in `content/docs/meta.json` and the route in `constants/routes.ts`. Auto-discovered folders need only steps 1-3 below.
 
-The sidebar, mobile nav, command menu, and prev/next navigation all read `TOP_LEVEL_SECTIONS`, so one entry covers all consumers. Do not hardcode sections in the consumer files.
+The sidebar, mobile nav, and command menu all call `buildNavGroups(tree)` from `lib/docs.ts`. Update `SECTION_GROUPS` and `EXCLUDED_SECTIONS` there. Never render nav items directly in consumer files.
 
 Steps:
 
@@ -200,5 +200,5 @@ Steps:
 2. Create `content/docs/<slug>/meta.json` with `{ "title": "<Display Name>" }`.
 3. Add `"<slug>"` to `content/docs/meta.json` `pages` at the desired position.
 4. Add `DOCS_<SLUG>: "/docs/<slug>"` to `constants/routes.ts`.
-5. Add `{ href: ROUTES.DOCS_<SLUG>, name: "<Display Name>" }` to `TOP_LEVEL_SECTIONS` in `lib/docs.ts`.
+5. If manually grouped, add `{ label: "<Group>", sections: [{ href: ROUTES.DOCS_<SLUG>, name: "<Display Name>" }] }` to `SECTION_GROUPS` in `lib/docs.ts`. Auto-discovered folders need no `SECTION_GROUPS` entry.
 6. Run `npm run build` to verify.
