@@ -8,7 +8,7 @@
     "directory": "packages/react"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "author": "arrafipd (https://github.com/arrafipd)",
+  "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "sideEffects": false,
   "type": "module",
   "exports": {

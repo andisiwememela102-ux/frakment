@@ -1,7 +1,7 @@
 Frakment License
 Version 1.0
 
-Copyright (c) 2026 arrafipd <https://github.com/arrafipd>
+Copyright (c) 2026 The Frakment Authors
 
 This is a source-available license. It is NOT an open-source license
 as defined by the Open Source Initiative (OSI).
@@ -43,7 +43,7 @@ educational activities.
 
 "Qualifying Contribution" means a pull request that has been
 reviewed and merged into the main branch of
-github.com/hanshapd/frakment, where all of the following are true:
+github.com/arrafipd/frakment, where all of the following are true:
 
   (a) The commit author is you (your GitHub username or email is
       recorded in the commit metadata).
@@ -89,8 +89,8 @@ whole or in part, for Personal, Educational, or Commercial Use, must:
   (a) Include the following attribution in the README, documentation,
       footer, or another reasonably visible user-facing location:
 
-        Based on Frakment by hanshapd
-        https://github.com/hanshapd/frakment
+        Based on Frakment
+        https://github.com/arrafipd/frakment
 
   (b) Include this LICENSE file unmodified in all copies and
       derivative works.
@@ -125,7 +125,7 @@ use by the same party.
 4.2  EVIDENCE ON REQUEST
 --------------------------------------------------------------------
 
-If hanshapd requests proof that the Commercial Use requirement has
+If the Frakment Authors request proof that the Commercial Use requirement has
 been satisfied, you must provide, within 30 days, a link to the
 merged pull request on GitHub.
 
@@ -149,7 +149,7 @@ You may not:
   (a) Remove, hide, or alter copyright notices or the attribution
       required by Section 3.
   (b) Claim authorship of this Software or of any derivative work.
-  (c) Use the names "Frakment", "frakment", or "hanshapd", or any
+  (c) Use the names "Frakment" or "frakment", or any
       associated logos or branding, to endorse or promote derivative
       works without prior written permission.
   (d) Sublicense this Software under different terms. Any party that
@@ -160,7 +160,7 @@ You may not:
 ====================================================================
 
 This license does not grant any rights to use the names "Frakment",
-"frakment", or "hanshapd", or any associated logos or marks, except
+"frakment", or any associated logos or marks, except
 as strictly necessary for the attribution described in Section 3.
 
 ====================================================================
@@ -187,4 +187,4 @@ not granted permission to use this project and must delete all copies
 in your possession.
 
 For permission requests or questions about this license, contact
-hanshapd on GitHub: https://github.com/hanshapd
+the Frakment Authors at https://github.com/arrafipd/frakment

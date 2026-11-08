@@ -19,7 +19,7 @@
     "directory": "packages/mcp"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "author": "arrafipd (https://github.com/arrafipd)",
+  "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "type": "module",
   "bin": {
     "frakment-mcp": "./index.js"
