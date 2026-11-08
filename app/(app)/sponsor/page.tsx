@@ -53,7 +53,7 @@ const SponsorPage = async () => {
           <div className="mt-4 flex items-center gap-3">
             <ExternalLinkButton href={LINK.SPONSOR} size="lg">
               <Heart />
-              Sponsor on GitHub
+              Support on Liberapay
               <ExternalLink className="size-3.5 opacity-60" />
             </ExternalLinkButton>
             <ExternalLinkButton href={LINK.GITHUB} size="lg" variant="outline">

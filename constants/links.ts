@@ -12,5 +12,5 @@ export const LINK = {
   FRAKMENT_MCP_DOCS: "/frakment/mcp",
   GITHUB: githubUrl,
   LICENSE: `${githubUrl}/blob/${GITHUB.branch}/LICENSE`,
-  SPONSOR: `https://github.com/sponsors/${GITHUB.user}`,
+  SPONSOR: "https://liberapay.com/frakment",
 } as const;
