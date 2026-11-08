@@ -1,7 +1,7 @@
 {
   "dependencies": [
-    "lucide-react",
-    "radix-ui"
+    "lucide-react@^1.69.0",
+    "radix-ui@^1.8.1"
   ],
   "deprecated": false,
   "description": "Multi-step form component. Bundles the headless engine and composes checkbox, radio-group, button, and card.",

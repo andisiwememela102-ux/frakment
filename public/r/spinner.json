@@ -1,6 +1,7 @@
 {
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "lucide-react@^1.69.0"
   ],
   "deprecated": false,
   "description": "A small animated loading indicator.",

@@ -1,8 +1,11 @@
 {
   "dependencies": [
     "lucide-react",
+    "lucide-react@^1.69.0",
     "motion",
-    "radix-ui"
+    "motion@^14.9.0",
+    "radix-ui",
+    "radix-ui@^1.8.1"
   ],
   "deprecated": false,
   "description": "A list of lines for the steps an agent takes.",

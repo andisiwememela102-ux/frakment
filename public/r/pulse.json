@@ -1,6 +1,7 @@
 {
   "dependencies": [
-    "lucide-react"
+    "lucide-react",
+    "lucide-react@^1.69.0"
   ],
   "deprecated": false,
   "description": "A daily status timeline for service uptime, with inline incident logs.",

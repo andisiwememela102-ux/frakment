@@ -90,8 +90,6 @@
     "@types/react-dom": "19.3.0",
     "cross-env": "^10.1.0",
     "lefthook": "^2.2.2",
-    "oxfmt": "^0.75.0",
-    "oxlint": "^1.90.0",
     "playwright": "^1.64.1",
     "rehype-highlight": "^7.0.2",
     "tailwindcss": "^4.3.3",

@@ -1,8 +1,11 @@
 {
   "dependencies": [
     "@frakment/ai",
+    "@frakment/ai@^0.0.4",
     "ai",
-    "motion"
+    "ai@^7.0.159",
+    "motion",
+    "motion@^14.9.0"
   ],
   "deprecated": false,
   "description": "An animated chat message that fades in and pins to the message scroller.",

@@ -1,7 +1,9 @@
 {
   "dependencies": [
     "class-variance-authority",
-    "lucide-react"
+    "class-variance-authority@^0.7.1",
+    "lucide-react",
+    "lucide-react@^1.69.0"
   ],
   "deprecated": false,
   "description": "A scrollable code container with header, copy button, line numbers, and diff highlighting.",

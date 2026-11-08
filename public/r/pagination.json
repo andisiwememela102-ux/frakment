@@ -1,7 +1,8 @@
 {
   "dependencies": [
     "lucide-react",
-    "radix-ui"
+    "lucide-react@^1.69.0",
+    "radix-ui@^1.8.1"
   ],
   "deprecated": false,
   "description": "Navigation for splitting content across multiple pages.",

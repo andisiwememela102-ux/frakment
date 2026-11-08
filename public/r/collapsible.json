@@ -1,7 +1,9 @@
 {
   "dependencies": [
     "motion",
-    "radix-ui"
+    "motion@^14.9.0",
+    "radix-ui",
+    "radix-ui@^1.8.1"
   ],
   "deprecated": false,
   "description": "An interactive component which expands and collapses a panel.",

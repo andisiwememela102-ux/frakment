@@ -1,8 +1,10 @@
 {
   "dependencies": [
     "class-variance-authority",
-    "motion",
-    "radix-ui"
+    "class-variance-authority@^0.7.1",
+    "motion@^14.9.0",
+    "radix-ui",
+    "radix-ui@^1.8.1"
   ],
   "deprecated": false,
   "description": "Displays file attachments with state indicators and shimmer for upload/processing.",

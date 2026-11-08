@@ -1,7 +1,9 @@
 {
   "dependencies": [
     "@frakment/react",
-    "lucide-react"
+    "@frakment/react@^0.0.2",
+    "lucide-react",
+    "lucide-react@^1.69.0"
   ],
   "deprecated": false,
   "description": "Scroll container for chat transcripts. Anchors turns, follows streamed replies, restores position, and tracks visibility.",

@@ -1,6 +1,7 @@
 {
   "dependencies": [
-    "radix-ui"
+    "radix-ui",
+    "radix-ui@^1.8.1"
   ],
   "deprecated": false,
   "description": "Displays an indicator showing the completion progress of a task.",

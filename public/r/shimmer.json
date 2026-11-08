@@ -1,6 +1,6 @@
 {
   "dependencies": [
-    "motion"
+    "motion@^14.9.0"
   ],
   "deprecated": false,
   "description": "Motion-driven text shimmer for streaming states.",
