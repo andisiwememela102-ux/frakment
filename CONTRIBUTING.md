@@ -143,7 +143,20 @@ npx frakment@latest add x
 2. Run `npm ci`.
 3. Make your change. If it ships a component or changes a user-facing package, update the changelog.
 4. Run `npm run fix`, `npm run check`, `npm run typecheck`, `npm test`.
-5. Open a pull request. Required checks must pass before merge.
+5. Sign off your commits with `git commit -s` (see [Sign-off](#sign-off-dco) below).
+6. Open a pull request. Required checks must pass before merge.
+
+## Sign-off (DCO)
+
+Every commit must be signed off with the Developer Certificate of Origin (DCO). Add `-s` to your commit command:
+
+```bash
+git commit -s -m "docs: fix typo in theming page"
+```
+
+This adds a `Signed-off-by: Your Name <email>` line to the commit message. It certifies you have the right to submit the contribution under this project's license. See [DCO.txt](./DCO.txt) for the full text.
+
+Commits without a valid `Signed-off-by` line fail the DCO check in CI and cannot be merged. Amend existing commits with `git commit --amend -s` (last commit) or `git rebase -i --signoff main` (multiple commits).
 
 ## Regenerate README assets
 
