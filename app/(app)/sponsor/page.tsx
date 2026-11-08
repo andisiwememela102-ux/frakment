@@ -38,17 +38,16 @@ const SponsorPage = async () => {
   return (
     <PageTransition>
       <section className="container-wrapper relative">
-        <div className="container flex max-w-2xl flex-col items-center gap-4 py-16 text-center md:py-20 lg:py-24">
-          <h1 className="from-foreground via-foreground to-foreground/65 bg-linear-to-b bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
+        <div className="container flex max-w-170 flex-col items-center gap-4 py-16 text-center md:py-20 lg:py-24">
+          <h1 className="text-foreground max-w-72.5 text-2xl font-semibold sm:max-w-full">
             Support Frakment
           </h1>
-          <p className="text-muted-foreground max-w-xl text-base text-balance">
-            Frakment is a monochrome component registry for AI interfaces. Every
-            component is free, open source, and that is not changing.
+          <p className="text-muted-foreground max-w-md text-sm leading-tight text-pretty">
+            Frakment ships standalone React components you copy into your
+            project &mdash; no lock-in, no paywalled features.
           </p>
-          <p className="text-muted-foreground max-w-xl text-sm text-balance">
-            No paywalled features, no gated components. If Frakment made your
-            project better, sponsoring is a nice way to say so.
+          <p className="text-muted-foreground max-w-md text-sm leading-tight text-pretty">
+            Sponsorships fund maintenance, new components, and infrastructure.
           </p>
           <div className="mt-4 flex items-center gap-3">
             <ExternalLinkButton href={LINK.SPONSOR} size="lg">
