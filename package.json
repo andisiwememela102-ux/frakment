@@ -29,7 +29,8 @@
     "test:watch": "vitest",
     "pretypecheck": "npm run build --workspaces --if-present",
     "typecheck": "tsc --noEmit",
-    "version:packages": "changeset version"
+    "version:packages": "changeset version",
+    "registry:audit": "node scripts/audit-registry.mjs"
   },
   "overrides": {
     "deepmerge": "npm:@stackline/deepmerge@^1.1.0",
