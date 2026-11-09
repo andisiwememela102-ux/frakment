@@ -9,6 +9,11 @@
     "registry",
     "tailwindcss"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arrafipd/frakment.git",
+    "directory": "packages/cli"
+  },
   "license": "MIT",
   "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "type": "module",
