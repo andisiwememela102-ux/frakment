@@ -1,6 +1,6 @@
 {
   "name": "frakment",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "CLI and design system for the frakment component registry",
   "keywords": [
     "components",

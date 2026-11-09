@@ -1,5 +1,11 @@
 # frakment
 
+## 0.0.7
+
+### Patch Changes
+
+- cf2dbaa: Validate registry component payloads and add dry-run controls for safer component installation.
+
 ## 0.0.6
 
 ### Patch Changes
