@@ -22,6 +22,12 @@ export default defineConfig({
       ],
       provider: "v8",
       reporter: ["text", "html"],
+      thresholds: {
+        branches: 35,
+        functions: 45,
+        lines: 38,
+        statements: 38,
+      },
     },
     environment: "jsdom",
     exclude: ["**/node_modules/**", "**/.next/**", "**/dist/**", "**/e2e/**"],
