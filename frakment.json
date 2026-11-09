@@ -1,4 +1,5 @@
 {
+  "$schema": "https://www.arrafi.dev/frakment/schema/frakment.json",
   "name": "frakment",
   "homepage": "https://github.com/arrafipd/frakment",
   "components": [
@@ -8,7 +9,10 @@
       "description": "A small label for statuses, categories, or counts.",
       "source": "registry/badge.tsx",
       "target": "components/ui/badge.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -18,7 +22,10 @@
       "description": "A monochrome button with six variants and six sizes.",
       "source": "registry/button.tsx",
       "target": "components/ui/button.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -28,7 +35,9 @@
       "description": "Displays rich content in a portal when hovering over a trigger.",
       "source": "registry/hover-card.tsx",
       "target": "components/ui/hover-card.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -38,7 +47,9 @@
       "description": "Displays an indicator showing the completion progress of a task.",
       "source": "registry/progress.tsx",
       "target": "components/ui/progress.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -48,8 +59,14 @@
       "description": "A daily status timeline for service uptime, with inline incident logs.",
       "source": "registry/pulse.tsx",
       "target": "components/ui/pulse.tsx",
-      "dependencies": ["lucide-react@^1.69.0"],
-      "registryDependencies": ["badge", "card", "trace"],
+      "dependencies": [
+        "lucide-react@^1.69.0"
+      ],
+      "registryDependencies": [
+        "badge",
+        "card",
+        "trace"
+      ],
       "type": "registry:ui"
     },
     {
@@ -65,8 +82,16 @@
           "target": "lib/questionnaire.ts"
         }
       ],
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
-      "registryDependencies": ["checkbox", "radio-group", "button", "card"]
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
+      "registryDependencies": [
+        "checkbox",
+        "radio-group",
+        "button",
+        "card"
+      ]
     },
     {
       "name": "slider",
@@ -74,7 +99,9 @@
       "description": "An input where the user selects a value from within a given range.",
       "source": "registry/slider.tsx",
       "target": "components/ui/slider.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -89,7 +116,9 @@
         "motion@^14.9.0",
         "radix-ui@^1.8.1"
       ],
-      "registryDependencies": ["shimmer"],
+      "registryDependencies": [
+        "shimmer"
+      ],
       "type": "registry:ui"
     },
     {
@@ -98,8 +127,13 @@
       "description": "Scroll container for chat transcripts. Anchors turns, follows streamed replies, restores position, and tracks visibility.",
       "source": "registry/message-scroller.tsx",
       "target": "components/ui/message-scroller.tsx",
-      "dependencies": ["@frakment/react@^0.0.2", "lucide-react@^1.69.0"],
-      "registryDependencies": ["button"],
+      "dependencies": [
+        "@frakment/react@^0.0.2",
+        "lucide-react@^1.69.0"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
       "type": "registry:ui"
     },
     {
@@ -128,7 +162,9 @@
       "description": "A centered placeholder for empty states.",
       "source": "registry/empty.tsx",
       "target": "components/ui/empty.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -138,8 +174,14 @@
       "description": "A composable input wrapper with inline addons, buttons, and text groups.",
       "source": "registry/input-group.tsx",
       "target": "components/ui/input-group.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1"],
-      "registryDependencies": ["button", "input", "textarea"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea"
+      ],
       "type": "registry:ui"
     },
     {
@@ -148,7 +190,9 @@
       "description": "A text label for form controls.",
       "source": "registry/label.tsx",
       "target": "components/ui/label.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -158,7 +202,9 @@
       "description": "A toggle control for boolean settings.",
       "source": "registry/switch.tsx",
       "target": "components/ui/switch.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -168,7 +214,10 @@
       "description": "A control that lets the user toggle between checked and not checked.",
       "source": "registry/checkbox.tsx",
       "target": "components/ui/checkbox.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -178,7 +227,10 @@
       "description": "A dropdown for selecting a single value from a list.",
       "source": "registry/select.tsx",
       "target": "components/ui/select.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -188,8 +240,13 @@
       "description": "A layout primitive for form fields — label, description, and inputs.",
       "source": "registry/field.tsx",
       "target": "components/ui/field.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1"],
-      "registryDependencies": ["label", "separator"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1"
+      ],
+      "registryDependencies": [
+        "label",
+        "separator"
+      ],
       "type": "registry:ui"
     },
     {
@@ -198,8 +255,15 @@
       "description": "An animated chat message that fades in and pins to the message scroller.",
       "source": "registry/message-animated.tsx",
       "target": "components/ui/message-animated.tsx",
-      "dependencies": ["@frakment/ai@^0.0.4", "ai@^7.0.159", "motion@^14.9.0"],
-      "registryDependencies": ["bubble", "message-scroller"],
+      "dependencies": [
+        "@frakment/ai@^0.0.4",
+        "ai@^7.0.159",
+        "motion@^14.9.0"
+      ],
+      "registryDependencies": [
+        "bubble",
+        "message-scroller"
+      ],
       "type": "registry:ui"
     },
     {
@@ -208,7 +272,10 @@
       "description": "Chat bubble surface with variants, alignment, and optional reactions.",
       "source": "registry/bubble.tsx",
       "target": "components/ui/bubble.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
       "type": "registry:ui"
     },
     {
@@ -221,7 +288,9 @@
         "class-variance-authority@^0.7.1",
         "lucide-react@^1.69.0"
       ],
-      "registryDependencies": ["button"],
+      "registryDependencies": [
+        "button"
+      ],
       "type": "registry:ui"
     },
     {
@@ -265,7 +334,9 @@
           "target": "public/avatars/female-l-3.avif"
         }
       ],
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "type": "registry:ui"
     },
     {
@@ -274,7 +345,10 @@
       "description": "A small inline status row with icon, content, and separator variants.",
       "source": "registry/marker.tsx",
       "target": "components/ui/marker.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
       "type": "registry:ui"
     },
     {
@@ -283,7 +357,9 @@
       "description": "A small animated loading indicator.",
       "source": "registry/spinner.tsx",
       "target": "components/ui/spinner.tsx",
-      "dependencies": ["lucide-react@^1.69.0"],
+      "dependencies": [
+        "lucide-react@^1.69.0"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -293,7 +369,9 @@
       "description": "A visual divider between content sections.",
       "source": "registry/separator.tsx",
       "target": "components/ui/separator.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "type": "registry:ui"
     },
     {
@@ -302,7 +380,10 @@
       "description": "A flexible row for grouping media, content, and actions.",
       "source": "registry/item.tsx",
       "target": "components/ui/item.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
       "type": "registry:ui"
     },
     {
@@ -311,7 +392,10 @@
       "description": "A two-state button that can be toggled on or off.",
       "source": "registry/toggle.tsx",
       "target": "components/ui/toggle.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -321,8 +405,13 @@
       "description": "A set of grouped toggle buttons.",
       "source": "registry/toggle-group.tsx",
       "target": "components/ui/toggle-group.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
-      "registryDependencies": ["toggle"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
+      "registryDependencies": [
+        "toggle"
+      ],
       "type": "registry:ui"
     },
     {
@@ -355,7 +444,10 @@
       "description": "A menu triggered by a button, with items, checkboxes, and submenus.",
       "source": "registry/dropdown-menu.tsx",
       "target": "components/ui/dropdown-menu.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -365,7 +457,9 @@
       "description": "A popup that displays information related to an element on hover or focus.",
       "source": "registry/tooltip.tsx",
       "target": "components/ui/tooltip.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -375,7 +469,9 @@
       "description": "A set of layered sections of content, known as tab panels, displayed one at a time.",
       "source": "registry/tabs.tsx",
       "target": "components/ui/tabs.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -385,7 +481,10 @@
       "description": "An animated text component that cycles through strings with ten transition variants.",
       "source": "registry/text-morph.tsx",
       "target": "components/ui/text-morph.tsx",
-      "dependencies": ["@number-flow/react@^0.6.2", "motion@^14.9.0"],
+      "dependencies": [
+        "@number-flow/react@^0.6.2",
+        "motion@^14.9.0"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -395,7 +494,10 @@
       "description": "An interactive component which expands and collapses a panel.",
       "source": "registry/collapsible.tsx",
       "target": "components/ui/collapsible.tsx",
-      "dependencies": ["motion@^14.9.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "motion@^14.9.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -405,7 +507,10 @@
       "description": "Displays the path to the current resource using a hierarchy of links.",
       "source": "registry/breadcrumb.tsx",
       "target": "components/ui/breadcrumb.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -415,8 +520,13 @@
       "description": "Groups related buttons into a single visual unit.",
       "source": "registry/button-group.tsx",
       "target": "components/ui/button-group.tsx",
-      "dependencies": ["class-variance-authority@^0.7.1", "radix-ui@^1.8.1"],
-      "registryDependencies": ["separator"],
+      "dependencies": [
+        "class-variance-authority@^0.7.1",
+        "radix-ui@^1.8.1"
+      ],
+      "registryDependencies": [
+        "separator"
+      ],
       "type": "registry:ui"
     },
     {
@@ -425,7 +535,10 @@
       "description": "Accessible one-time password input with configurable length and pattern.",
       "source": "registry/input-otp.tsx",
       "target": "components/ui/input-otp.tsx",
-      "dependencies": ["input-otp@^1.5.0", "lucide-react@^1.69.0"],
+      "dependencies": [
+        "input-otp@^1.5.0",
+        "lucide-react@^1.69.0"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -435,8 +548,13 @@
       "description": "Navigation for splitting content across multiple pages.",
       "source": "registry/pagination.tsx",
       "target": "components/ui/pagination.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
-      "registryDependencies": ["button"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
       "type": "registry:ui"
     },
     {
@@ -445,7 +563,9 @@
       "description": "A set of checkable buttons where only one can be selected at a time.",
       "source": "registry/radio-group.tsx",
       "target": "components/ui/radio-group.tsx",
-      "dependencies": ["radix-ui@^1.8.1"],
+      "dependencies": [
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -469,7 +589,9 @@
       "description": "Motion-driven text shimmer for streaming states.",
       "source": "registry/shimmer.tsx",
       "target": "components/ui/shimmer.tsx",
-      "dependencies": ["motion@^14.9.0"],
+      "dependencies": [
+        "motion@^14.9.0"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -484,7 +606,10 @@
         "motion@^14.9.0",
         "radix-ui@^1.8.1"
       ],
-      "registryDependencies": ["button", "shimmer"],
+      "registryDependencies": [
+        "button",
+        "shimmer"
+      ],
       "type": "registry:ui"
     },
     {
@@ -493,7 +618,10 @@
       "description": "A modal dialog built on Radix.",
       "source": "registry/dialog.tsx",
       "target": "components/ui/dialog.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     },
@@ -503,7 +631,10 @@
       "description": "A modal sheet that slides in from a side.",
       "source": "registry/sheet.tsx",
       "target": "components/ui/sheet.tsx",
-      "dependencies": ["lucide-react@^1.69.0", "radix-ui@^1.8.1"],
+      "dependencies": [
+        "lucide-react@^1.69.0",
+        "radix-ui@^1.8.1"
+      ],
       "registryDependencies": [],
       "type": "registry:ui"
     }
@@ -515,7 +646,10 @@
       "description": "Instructions for AI agents to discover, browse, and install Frakment components.",
       "source": "skills/frakment-usage/SKILL.md",
       "version": "0.1.0",
-      "allowedTools": ["fetch", "bash"]
+      "allowedTools": [
+        "fetch",
+        "bash"
+      ]
     }
   ]
 }
