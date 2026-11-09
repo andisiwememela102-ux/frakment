@@ -2,7 +2,7 @@
   "name": "@frakment/site",
   "version": "0.0.1",
   "private": true,
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "type": "module",
   "workspaces": [

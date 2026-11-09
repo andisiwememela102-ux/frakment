@@ -1,7 +1,7 @@
 # frakment CLI
 
 [![npm](https://img.shields.io/npm/v/frakment?style=for-the-badge&color=000)](https://www.npmjs.com/package/frakment)
-[![License](https://img.shields.io/badge/license-source--available-blue?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](./LICENSE)
 
 Monochrome design system and component registry CLI.
 
@@ -101,4 +101,4 @@ If your `globals.css` lives at `src/app/globals.css`, component files are writte
 
 ## License
 
-Source-available. See [LICENSE](./LICENSE). Commercial use requires at least one merged pull request to [arrafipd/frakment](https://github.com/arrafipd/frakment).
+MIT licensed. See [LICENSE](./LICENSE).

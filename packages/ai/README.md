@@ -3,7 +3,7 @@
 First-party deterministic chat engine for Frakment AI interfaces.
 
 [![npm](https://img.shields.io/npm/v/@frakment/ai?style=for-the-badge&color=000)](https://www.npmjs.com/package/@frakment/ai)
-[![License](https://img.shields.io/badge/license-source--available-blue?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](./LICENSE)
 
 The engine powers the chat and agent primitives in the Frakment registry (message-animated, trace, chain-of-thought). It wraps the Vercel AI SDK with a deterministic event contract so UI components can render stable, replayable state.
 
@@ -69,4 +69,4 @@ All event types (`ChatEvent`, `ChatEventEnvelope`, `UIMessageChunk`, `ToolHandle
 
 ## License
 
-Source-available. Free for personal and educational use. Commercial use requires at least one merged pull request to https://github.com/arrafipd/frakment. See [LICENSE](./LICENSE).
+MIT licensed. See [LICENSE](./LICENSE).
