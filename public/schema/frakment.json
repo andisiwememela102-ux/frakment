@@ -5,11 +5,7 @@
   "description": "Registry manifest for Frakment components and skills.",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "name",
-    "homepage",
-    "components"
-  ],
+  "required": ["name", "homepage", "components"],
   "properties": {
     "$schema": {
       "type": "string",
@@ -48,14 +44,7 @@
     "component": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "name",
-        "title",
-        "description",
-        "type",
-        "source",
-        "target"
-      ],
+      "required": ["name", "title", "description", "type", "source", "target"],
       "properties": {
         "name": {
           "type": "string",
@@ -105,10 +94,7 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": [
-              "source",
-              "target"
-            ],
+            "required": ["source", "target"],
             "properties": {
               "source": {
                 "type": "string"
@@ -124,11 +110,7 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": [
-              "path",
-              "type",
-              "target"
-            ],
+            "required": ["path", "type", "target"],
             "properties": {
               "path": {
                 "type": "string",
@@ -136,9 +118,7 @@
               },
               "type": {
                 "type": "string",
-                "enum": [
-                  "registry:file"
-                ]
+                "enum": ["registry:file"]
               },
               "target": {
                 "type": "string",
@@ -152,13 +132,7 @@
     "skill": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "name",
-        "title",
-        "description",
-        "source",
-        "version"
-      ],
+      "required": ["name", "title", "description", "source", "version"],
       "properties": {
         "name": {
           "type": "string",

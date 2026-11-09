@@ -23,6 +23,7 @@
     "prepare": "lefthook install",
     "registry:audit": "node scripts/audit-registry.mjs",
     "registry:build": "node scripts/build-registry.mjs",
+    "registry:validate": "node scripts/validate-manifest.mjs",
     "release": "npm run build --workspaces --if-present && changeset publish",
     "start": "next start",
     "pretest": "npm run build --workspaces --if-present",
@@ -30,8 +31,7 @@
     "test:watch": "vitest",
     "pretypecheck": "npm run build --workspaces --if-present",
     "typecheck": "tsc --noEmit",
-    "version:packages": "changeset version",
-    "registry:validate": "node scripts/validate-manifest.mjs"
+    "version:packages": "changeset version"
   },
   "overrides": {
     "deepmerge": "npm:@stackline/deepmerge@^1.1.0",
