@@ -7,7 +7,7 @@
     "url": "git+https://github.com/arrafipd/frakment.git",
     "directory": "packages/react"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "sideEffects": false,
   "type": "module",

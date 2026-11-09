@@ -18,7 +18,7 @@
     "url": "git+https://github.com/arrafipd/frakment.git",
     "directory": "packages/mcp"
   },
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "type": "module",
   "bin": {
@@ -26,7 +26,8 @@
   },
   "files": [
     "index.js",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
