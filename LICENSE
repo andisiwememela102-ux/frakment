@@ -188,3 +188,23 @@ in your possession.
 
 For permission requests or questions about this license, contact
 the Frakment Authors at https://github.com/arrafipd/frakment
+
+---
+
+Third-Party Components and Sublicensing
+
+This License applies to the Frakment software as a whole. However, certain
+components, dependencies, or portions of code included in or adapted by this
+project may be subject to their own separate license terms.
+
+1. No Relicensing of Third-Party Material. Nothing in this License grants You
+   the right to sublicense, relicense, or distribute any third-party component
+   under terms different from those of its original license.
+
+2. Attribution and Notices. Copyright notices and license texts for third-party
+   components are provided in the THIRD_PARTY_NOTICES.md file distributed with
+   this project. You must retain all such notices when redistributing.
+
+3. Adapted Components. Components adapted from other open-source projects
+   (including but not limited to shadcn/ui) remain subject to their original
+   licenses. See THIRD_PARTY_NOTICES.md for a list of adapted components.

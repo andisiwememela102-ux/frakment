@@ -1,46 +1,65 @@
 # Third-Party Notices
 
-Frakment includes code adapted from third-party open-source projects.
-Each project is listed below with its original license.
+This project includes or adapts code from the following third-party projects.
+Each remains under its original license.
 
-## shadcn/ui
+## Adapted Components
 
-Portions of components in `components/ui/` and `registry/` are adapted from
-[shadcn/ui](https://github.com/shadcn-ui/ui), which is distributed under the
-MIT License.
+### shadcn/ui
+- **License:** MIT
+- **Source:** https://github.com/shadcn-ui/ui
+- **Scope:** components in `registry/` and `components/ui/` are adapted from shadcn/ui.
 
-MIT License
+## Runtime Dependencies
 
-Copyright (c) 2023 shadcn
+- `@ai-sdk/react` ^4.0.167
+- `@frakment/ai` workspace:*
+- `@frakment/react` workspace:*
+- `@icons-pack/react-simple-icons` ^13.15.1
+- `@number-flow/react` ^0.6.2
+- `@phosphor-icons/react` ^2.1.10
+- `@tailwindcss/postcss` ^4.3.3
+- `@vercel/analytics` ^2.0.1
+- `@web-kits/audio` ^0.2.0
+- `ai` ^7.0.159
+- `class-variance-authority` ^0.7.1
+- `clsx` ^2.1.1
+- `cmdk` ^1.1.1
+- `fumadocs-core` ^16.18.0
+- `fumadocs-mdx` ^15.5.0
+- `fumadocs-ui` ^16.18.0
+- `input-otp` ^1.5.0
+- `jiti` ^2.7.0
+- `jotai` ^3.0.1
+- `lru-cache` ^11.5.3
+- `lucide-react` ^1.70.0
+- `marked` ^18.1.2
+- `motion` ^14.10.0
+- `next` ^16.4.3
+- `next-themes` 0.4.6
+- `postcss` ^8.5.32
+- `radix-ui` ^1.8.1
+- `react` 19.3.1
+- `react-dom` 19.3.1
+- `react-hotkeys-hook` ^5.3.3
+- `react-markdown` ^10.1.0
+- `rehype-pretty-code` ^0.14.6
+- `remark-breaks` ^4.0.0
+- `remark-gfm` ^4.0.1
+- `shiki` ^4.5.0
+- `sonner` ^2.0.8
+- `tailwind-merge` ^3.7.0
+- `ts-morph` ^28.0.0
+- `use-stick-to-bottom` ^1.1.6
+- `vaul` ^1.1.2
+- `web-haptics` ^0.0.6
+- `zod` ^4.6.7
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## AI Components
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+AI-specific primitives in `@frakment/ai` may adapt patterns from Vercel AI Elements
+(Apache-2.0). See https://github.com/vercel/ai-elements.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+---
 
-## Other dependencies
-
-The following packages are used as regular dependencies (installed via npm,
-not vendored). Their licenses are included automatically in `node_modules/`
-and are not redistributed as part of Frakment's source:
-
-- Radix UI — MIT
-- Motion — MIT
-- Lucide — ISC
-- Sonner — MIT
-- input-otp — MIT
-- @number-flow/react — MIT
-- next-themes — MIT
+Maintained alongside the Frakment source code. Report omissions via GitHub Issues.

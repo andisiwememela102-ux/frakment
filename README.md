@@ -9,7 +9,7 @@
 
 **The Fragments behind your Design System.**
 
-Composable, accessible, customizable — inherently reusable.<br/>
+Composable, accessible, customizable - inherently reusable.<br/>
 One-time setup. Built in AI and motion. Minimal configuration.
 
 [![License](https://img.shields.io/badge/license-source--available-blue?style=for-the-badge)](LICENSE)
@@ -24,11 +24,13 @@ One-time setup. Built in AI and motion. Minimal configuration.
 
 **Frakment** is a component registry for React interfaces. Every component ships as source you copy into your project - depends only on a small set of well-known libraries, and stays yours to edit.
 
+
+> **Pre-1.0 (`0.0.x`)** - APIs and component APIs may change between releases. Pin a specific version and read the changelog before upgrading.
 ## Highlights
 
 **Installable via CLI** - `npx frakment add <name>` fetches the component and every registry dependency it needs. Files land in your repo, fully editable.
 
-**AI and motion, built in** - chat, agent, and reasoning primitives ship with AI support and Motion. Baseline primitives stay motion-ready without extra setup.
+**AI and motion, built in** - chat and agent primitives ship with AI support and Motion. Baseline primitives stay motion-ready without extra setup.
 
 **Built for agents** - MCP server and Agent Skills let tools discover, fetch, and install components autonomously.
 
@@ -42,9 +44,15 @@ One-time setup. Built in AI and motion. Minimal configuration.
 
 **AI Elements** - Attachment, Bubble, Message, Message Animated, Message Scroller, Trace.
 
-**Modules** - Questionnaire, Pulse, Shimmer, Text Morph.
+**Modules** - Questionnaire, Pulse, Text Morph.
 
 Browse the full catalog: **[www.arrafi.dev/frakment/docs/components](https://www.arrafi.dev/frakment/docs/components)**
+
+## Requirements
+
+- **Node.js** `>=22` (see `.nvmrc`)
+- **React** `19`
+- **Tailwind CSS** `v4`
 
 ## Quick start
 
@@ -55,6 +63,16 @@ npx frakment@latest add button
 
 `init` sets up `components.json`, injects the theme block into `globals.css`, and installs base dependencies. `add` fetches a component plus every registry dependency it needs. Run `add` again for each new component.
 
+## Updating components
+
+Frakment copies source into your project - `npx frakment add <name>` overwrites the existing file. To update safely:
+
+1. **Commit your current version** so you can review diffs.
+2. Run `npx frakment add <name>` to fetch the latest version.
+3. Run `git diff` to review changes and merge any local customizations.
+
+Read the changelog at https://github.com/arrafipd/frakment/releases before updating - component APIs may change between `0.0.x` releases.
+
 ## Built for agents
 
 Frakment ships with an MCP server and Agent Skills so AI tools can discover and install components without scraping HTML.
@@ -63,24 +81,24 @@ Frakment ships with an MCP server and Agent Skills so AI tools can discover and 
 npx -y @frakment/mcp
 ```
 
-- **MCP server** → [www.arrafi.dev/frakment/docs/mcp](https://www.arrafi.dev/frakment/docs/mcp)
-- **Agent Skills** → [www.arrafi.dev/frakment/docs/skills](https://www.arrafi.dev/frakment/docs/skills)
-- **llms.txt** → [www.arrafi.dev/frakment/llms.txt](https://www.arrafi.dev/frakment/llms.txt)
+- **MCP server** -> [www.arrafi.dev/frakment/docs/utilities/mcp](https://www.arrafi.dev/frakment/docs/utilities/mcp)
+- **Agent Skills** -> [www.arrafi.dev/frakment/docs/utilities/skills](https://www.arrafi.dev/frakment/docs/utilities/skills)
+- **llms.txt** -> [www.arrafi.dev/frakment/llms.txt](https://www.arrafi.dev/frakment/llms.txt)
 
 ## Documentation
 
 | | |
 | :--- | :--- |
-| [**Components**](https://www.arrafi.dev/frakment/docs/components) | Baseline primitives — Button, Input, Field, Card, and more |
-| [**AI Elements**](https://www.arrafi.dev/frakment/docs/ai-elements) | Chat, agent, and reasoning primitives |
+| [**Components**](https://www.arrafi.dev/frakment/docs/components) | Baseline primitives - Button, Input, Field, Card, and more |
+| [**AI Elements**](https://www.arrafi.dev/frakment/docs/ai-elements) | Chat and agent primitives |
 | [**Installation**](https://www.arrafi.dev/frakment/docs/installation) | Setup for Next.js, Vite, Astro, and manual |
 | [**Theming**](https://www.arrafi.dev/frakment/docs/theming) | CSS variables, dark mode, and tokens |
-| [**MCP Server**](https://www.arrafi.dev/frakment/docs/mcp) | Registry discovery for AI tools |
+| [**MCP Server**](https://www.arrafi.dev/frakment/docs/utilities/mcp) | Registry discovery for AI tools |
 | [**Changelog**](https://www.arrafi.dev/frakment/docs/changelog) | What shipped, when |
 
 ## Contributing
 
-Contributions are welcome — typo fixes, docs, tests, translations, or new components. See [CONTRIBUTING.md](./CONTRIBUTING.md).
+Contributions are welcome - typo fixes, docs, tests, translations, or new components. See [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 A merged pull request satisfies the commercial-use requirement in the license.
 
@@ -88,9 +106,9 @@ A merged pull request satisfies the commercial-use requirement in the license.
 
 See [THIRD_PARTY_NOTICES.md](./THIRD_PARTY_NOTICES.md) for upstream attributions.
 
-Source-available. Free for personal and educational use. Commercial use requires one qualifying contribution — see [LICENSE](./LICENSE) Section 4.
+Source-available. Free for personal and educational use. Commercial use requires one qualifying contribution - see [LICENSE](./LICENSE) Section 4.
 
-Attribution required — see [ATTRIBUTION.md](./ATTRIBUTION.md).
+Attribution required - see [ATTRIBUTION.md](./ATTRIBUTION.md).
 
 ## Utilities
 

@@ -5,7 +5,18 @@ const getBaseUrl = () => {
     return "http://localhost:3000";
   }
 
-  return process.env.SITE_URL ?? FALLBACK_SITE_ORIGIN;
+  const siteUrl = process.env.SITE_URL;
+  if (siteUrl) {
+    return siteUrl;
+  }
+
+  if (process.env.VERCEL_ENV === "production") {
+    throw new Error(
+      "SITE_URL is required in production. Set it in Vercel env vars."
+    );
+  }
+
+  return FALLBACK_SITE_ORIGIN;
 };
 
 const baseUrl = getBaseUrl();

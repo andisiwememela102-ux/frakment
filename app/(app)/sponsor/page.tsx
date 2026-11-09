@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 import { ExternalLinkButton } from "@/components/external-link-button";
 import { PageTransition } from "@/components/page-transition";
@@ -10,8 +10,9 @@ import {
 import { UserAvatar } from "@/components/user-avatar";
 import { LINK } from "@/constants/links";
 import { ROUTES } from "@/constants/routes";
-import { getContributors, getSponsors } from "@/lib/github";
+import { getContributors } from "@/lib/github";
 import { ExternalLink, Heart, Star } from "@/lib/icons";
+import { SPONSORS } from "@/lib/sponsors";
 import { createPageMetadata } from "@/seo/metadata";
 
 export const metadata: Metadata = createPageMetadata({
@@ -25,10 +26,8 @@ const MAX_SPONSORS = 12;
 const MAX_CONTRIBUTORS = 30;
 
 const SponsorPage = async () => {
-  const [sponsors, contributors] = await Promise.all([
-    getSponsors(),
-    getContributors(),
-  ]);
+  const contributors = await getContributors();
+  const sponsors = SPONSORS;
 
   const visibleSponsors = sponsors.slice(0, MAX_SPONSORS);
   const extraSponsors = sponsors.length - visibleSponsors.length;
@@ -71,7 +70,7 @@ const SponsorPage = async () => {
             </p>
             <div className="flex max-w-lg flex-wrap justify-center gap-y-1">
               {visibleSponsors.map((s, i) => (
-                <Tooltip key={s.login}>
+                <Tooltip key={s.name}>
                   <TooltipTrigger asChild>
                     <a
                       className="group ring-background relative rounded-full ring-2 transition-transform hover:z-10 hover:scale-110"
@@ -92,9 +91,9 @@ const SponsorPage = async () => {
                       ) : (
                         <UserAvatar
                           className="rounded-full"
-                          name={s.name || s.login}
+                          name={s.name}
                           size={52}
-                          src={s.avatar_url}
+                          src={s.avatar}
                         />
                       )}
                     </a>

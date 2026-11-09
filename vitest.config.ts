@@ -1,16 +1,32 @@
+import { fileURLToPath } from "node:url";
+import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
-/**
- * Vitest config. Minimal by design — the `@/` alias mirrors
- * tsconfig.json paths so test imports match app imports.
- */
+const rootDir = fileURLToPath(new URL(".", import.meta.url));
+
 export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
-      "@": process.cwd(),
+      "@": rootDir,
     },
   },
   test: {
-    environment: "node",
+    coverage: {
+      exclude: [
+        "**/node_modules/**",
+        "**/.next/**",
+        "**/*.config.*",
+        "**/*.d.ts",
+        "**/examples/**",
+      ],
+      provider: "v8",
+      reporter: ["text", "html"],
+    },
+    environment: "jsdom",
+    exclude: ["**/node_modules/**", "**/.next/**", "**/dist/**", "**/e2e/**"],
+    globals: true,
+    include: ["**/*.{test,spec}.{ts,tsx}"],
+    setupFiles: ["./vitest.setup.ts"],
   },
 });
