@@ -1,5 +1,11 @@
 # frakment
 
+## 0.0.6
+
+### Patch Changes
+
+- f53057c: Add `repository.url` to `package.json` so OIDC trusted publishing can verify provenance. Fixes E422 on publish.
+
 ## 0.0.5
 
 ### Patch Changes
