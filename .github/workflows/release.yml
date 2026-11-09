@@ -36,3 +36,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
+      - name: Ensure all version tags and releases exist
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for pkg in packages/*/package.json; do
+            name=$(node -p "require('./$pkg').name")
+            version=$(node -p "require('./$pkg').version")
+            tag="${name}@${version}"
+            if ! git rev-parse "$tag" >/dev/null 2>&1; then
+              git tag -a "$tag" -m "$tag"
+              git push origin "$tag" || true
+            fi
+            if ! gh release view "$tag" >/dev/null 2>&1; then
+              latest_flag="--latest=false"
+              if [ "$name" = "frakment" ]; then latest_flag="--latest"; fi
+              gh release create "$tag" --title "$tag" --notes "Automated release for $tag" --verify-tag $latest_flag || true
+            fi
+          done
