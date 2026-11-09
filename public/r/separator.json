@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "separator",
   "registryDependencies": [],
   "title": "Separator",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:336f8f4928a3b7dcb235af0d869a59417c9c9bb93d3561dad026d76cddf67995"
 }

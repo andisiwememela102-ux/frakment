@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0"
   ],
   "deprecated": false,
@@ -18,5 +17,6 @@
     "trace"
   ],
   "title": "Pulse",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:5637110e693c9e4cf16ec80288ae68437829bfa6c9978bbc2a54a2ef4f748f60"
 }

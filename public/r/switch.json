@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "switch",
   "registryDependencies": [],
   "title": "Switch",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:61424eac6fdb29de524590987649ccff56f6ad8fa703269c16174cde26b56a4a"
 }

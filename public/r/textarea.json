@@ -11,5 +11,6 @@
   "name": "textarea",
   "registryDependencies": [],
   "title": "Textarea",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:109cda46b2518a8173ff3aeae760c69ca9ee87f565180e726f980c6020e217e8"
 }

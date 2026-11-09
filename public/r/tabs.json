@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "tabs",
   "registryDependencies": [],
   "title": "Tabs",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:4ac64322c9da0c9e965941da89d98f290d66e30e5af7298d2008bf57a410d7d4"
 }

@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
     "radix-ui@^1.8.1"
   ],
@@ -17,5 +16,6 @@
     "button"
   ],
   "title": "Pagination",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:a64cfeb905317ff7786a4bd1552ce0b00f7cfc460cf9af7b020a06a8d64bdfc3"
 }

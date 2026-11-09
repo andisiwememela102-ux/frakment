@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1"
   ],
   "deprecated": false,
@@ -17,5 +16,6 @@
     "separator"
   ],
   "title": "Field",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:412f96853c9e293ec77b3e1a7a0de671b47a5019556b383da16b98d2b9fd48d9"
 }

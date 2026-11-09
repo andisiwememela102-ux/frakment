@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "dialog",
   "registryDependencies": [],
   "title": "Dialog",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:337dd8f16ffe68dd3fbecd651d60dd2924c4f673105a7bcf1dc1087a433ce350"
 }

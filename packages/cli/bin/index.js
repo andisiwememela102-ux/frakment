@@ -37,7 +37,12 @@ program
 program
   .command("add <component>")
   .description("Add a component from the frakment registry")
+  .option(
+    "--dry-run",
+    "Show planned file and dependency changes without writing"
+  )
   .option("--registry <url>", "Custom registry URL")
+  .option("--skip-dependencies", "Do not install missing npm dependencies")
   .option("--overwrite", "Overwrite existing files", false)
   .action(add);
 

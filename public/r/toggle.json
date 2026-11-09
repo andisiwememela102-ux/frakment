@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "toggle",
   "registryDependencies": [],
   "title": "Toggle",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:0b24ecc143c3be69b9ec20b1e157975687eb151f49b76eda1626d7e594a70455"
 }

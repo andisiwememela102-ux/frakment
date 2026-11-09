@@ -20,10 +20,22 @@ Complete reference for the `frakment` CLI. New to Frakment? Start with [Installa
 <PropsTable
   rows={[
     {
+      name: "--dry-run",
+      type: "boolean",
+      defaultValue: "false",
+      description: "Show planned files and dependencies without changing the project.",
+    },
+    {
       name: "--registry <url>",
       type: "string",
       defaultValue: "from components.json",
       description: "Override the registry URL for this run.",
+    },
+    {
+      name: "--skip-dependencies",
+      type: "boolean",
+      defaultValue: "false",
+      description: "Write component files without installing missing npm dependencies.",
     },
     {
       name: "--overwrite",

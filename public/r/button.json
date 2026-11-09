@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "button",
   "registryDependencies": [],
   "title": "Button",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:70e17644e9f2b249b54170ac7462f4e66b5ecbd6304564deb4195becd16ffb24"
 }

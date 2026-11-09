@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "sheet",
   "registryDependencies": [],
   "title": "Sheet",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:eb43db20170a4907f0a66dae840a9cb800669ce9301628c2ec03b9de3923d3f4"
 }

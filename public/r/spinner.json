@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "spinner",
   "registryDependencies": [],
   "title": "Spinner",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:dc61bea266e60ba375a8ba35010a374573c891e442c3e43b994a0e0011beb64f"
 }

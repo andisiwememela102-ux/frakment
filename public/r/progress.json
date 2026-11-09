@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "progress",
   "registryDependencies": [],
   "title": "Progress",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:5ddfdf10e00b0356431c4926b5a3d0f617445e5e72452589e6b247a730c2741e"
 }

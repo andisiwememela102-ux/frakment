@@ -45,6 +45,11 @@ describe("build-registry", () => {
     expect(button.files.length).toBeGreaterThan(0);
     expect(button.files[0]).toHaveProperty("path");
     expect(button.files[0]).toHaveProperty("content");
+    expect(button.integrity).toMatch(/^sha256:[a-f0-9]{64}$/u);
+    expect(button.dependencies).toEqual([
+      "class-variance-authority@^0.7.1",
+      "radix-ui@^1.8.1",
+    ]);
   });
 
   it("attachment has registry dependencies on button and shimmer", async () => {

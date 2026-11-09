@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "empty",
   "registryDependencies": [],
   "title": "Empty",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:0fbaa8de920728341bbb0e4c51f7cea68f0e4444c04453c947c6a2610383321a"
 }

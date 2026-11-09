@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "item",
   "registryDependencies": [],
   "title": "Item",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:baa78ebf2fdaaf74e8cd15f792f6364451a4f8990964786510708e23053141a9"
 }

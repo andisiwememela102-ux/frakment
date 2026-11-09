@@ -11,5 +11,6 @@
   "name": "card",
   "registryDependencies": [],
   "title": "Card",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:adb96865996bf7fecae4b404b1130fef1f31c9e8d2d4459e07c97669b7242d36"
 }

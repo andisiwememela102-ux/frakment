@@ -1,10 +1,7 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "next-themes",
     "next-themes@^0.4.6",
-    "sonner",
     "sonner@^2.0.8"
   ],
   "deprecated": false,
@@ -20,5 +17,6 @@
     "spinner"
   ],
   "title": "Toast",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:a109db5c8ba28bcfbe03083e627c35db396e7a57b2b44408163098b7da07c754"
 }

@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "marker",
   "registryDependencies": [],
   "title": "Marker",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:3c743f6466a6b99407a01616513a8b543287d962c8a3c9bdc743680599244966"
 }

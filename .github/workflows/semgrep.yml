@@ -20,7 +20,7 @@ jobs:
           persist-credentials: false
       - name: Scan
         run: |
-          semgrep scan --config=p/security-audit --config=p/typescript --sarif --output=semgrep.sarif --error || true
+          semgrep scan --config=p/security-audit --config=p/typescript --sarif --output=semgrep.sarif --error
       - uses: github/codeql-action/upload-sarif@a3d1b77a1ba1550fbb5c74db1dc3a11f4a481126
         if: always()
         with:

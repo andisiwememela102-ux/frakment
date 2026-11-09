@@ -23,5 +23,6 @@
     "radio-group"
   ],
   "title": "Questionnaire",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:5057e878923a8d76510ad1ac9adb2efb5c2338fc3dcd4333fa0b4aa57af8a082"
 }

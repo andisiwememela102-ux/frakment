@@ -11,5 +11,6 @@
   "name": "message",
   "registryDependencies": [],
   "title": "Message",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:4acd75bc38cccff05d42b936f5019512e97c18eed41ccd73dafd483b855313ca"
 }

@@ -26,7 +26,7 @@ export default defineConfig({
     environment: "jsdom",
     exclude: ["**/node_modules/**", "**/.next/**", "**/dist/**", "**/e2e/**"],
     globals: true,
-    include: ["**/*.{test,spec}.{ts,tsx}"],
+    include: ["**/*.{test,spec}.{ts,tsx,js,mjs}"],
     pool: "vmThreads",
     setupFiles: ["./vitest.setup.ts"],
   },

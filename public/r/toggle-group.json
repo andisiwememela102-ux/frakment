@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -18,5 +16,6 @@
     "toggle"
   ],
   "title": "Toggle Group",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:1fb1e61417a2806e7ad11715162d78028de42839671d73d7ac40c0c089f1b2d7"
 }

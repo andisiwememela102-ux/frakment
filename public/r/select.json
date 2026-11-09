@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "select",
   "registryDependencies": [],
   "title": "Select",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:e67043e9e7c99f57c256e9760cd82db9d2bcc3d9d1b7a69364c4d7202a332e70"
 }

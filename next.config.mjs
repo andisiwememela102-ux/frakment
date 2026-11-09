@@ -6,6 +6,22 @@ const jiti = createJiti(import.meta.url);
 const { LINK } = await jiti.import("./constants/links");
 const { ROUTES } = await jiti.import("./constants/routes");
 
+const securityHeaders = [
+  {
+    key: "Content-Security-Policy",
+    value:
+      "default-src 'self'; base-uri 'self'; connect-src 'self' https://vitals.vercel-insights.com; font-src 'self' data:; form-action 'self'; frame-ancestors 'none'; img-src 'self' https: data: blob:; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'",
+  },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), geolocation=(), microphone=(), payment=(), usb=()",
+  },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Strict-Transport-Security", value: "max-age=31536000" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: process.env.NODE_ENV === "production" ? "/frakment" : "",
@@ -26,6 +42,10 @@ const nextConfig = {
     ].join(", ");
 
     return [
+      {
+        headers: securityHeaders,
+        source: "/:path*",
+      },
       {
         headers: [{ key: "Link", value: link }],
         source: `/frakment${ROUTES.HOME}`,
@@ -67,7 +87,6 @@ const nextConfig = {
     ];
   },
   transpilePackages: ["@frakment/ai", "@frakment/react"],
-  typescript: { ignoreBuildErrors: true },
 };
 
 const withMDX = createMDX({});

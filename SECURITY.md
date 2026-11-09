@@ -40,11 +40,10 @@ The CLI writes files into the user's project and installs npm dependencies from 
 
 Threats and mitigations:
 
-- **Path traversal.** File paths from the registry are validated against the target directory. Paths containing `..` or absolute paths are rejected.
+- **Path traversal.** The CLI validates each registry file path before writing. Paths containing `..`, absolute paths, null bytes, and symlink escapes are rejected.
 - **Arbitrary file overwrite.** Existing files are preserved unless `--overwrite` is passed. Overwrite requires per-file confirmation by default.
-- **Untrusted dependency install.** The CLI installs only packages declared in the component's `dependencies` list and resolved by the user's package manager. Versions are not pinned by the CLI, so registry authors must pin or range correctly in `frakment.json`.
-- **Remote registry integrity.** The CLI fetches JSON from the URL in `components.json`. If the registry is compromised, the fetched component code runs in the user's project. Use a trusted registry URL and review installed components before running them.
-- **No integrity hash (current limitation).** Components are fetched without a content hash. A tampered registry can serve modified code between fetch and review. Planned: per-component integrity hash and `--dry-run` flag.
+- **Untrusted dependency install.** The CLI validates registry payloads and accepts conventional npm package specifications only. Use `--dry-run` to review file and dependency changes, or `--skip-dependencies` to defer dependency installation.
+- **Remote registry checksum.** Registry payloads include a SHA-256 checksum that the CLI verifies before writing files or installing dependencies. The checksum detects corruption, but it does not authenticate a registry because the registry serves both the payload and checksum.
 
 ### MCP server (`npx -y @frakment/mcp`)
 
@@ -63,12 +62,12 @@ Component metadata, source code, and install commands published to the registry 
 Threats and mitigations:
 
 - **Prompt injection in descriptions or source.** Descriptions and code are treated as data. Agents must not interpret embedded instructions in registry content as commands.
-- **Tampered registry.** Publishing to the registry requires npm and GitHub credentials. If the registry host is compromised, all consumers are affected. Report suspected tampering via Security Advisories.
+- **Tampered registry.** Publishing to the registry requires npm and GitHub credentials. A compromised registry or publisher can serve a matching malicious checksum, so use a trusted registry URL and review installed components. Report suspected tampering via Security Advisories.
 
 ## Known limitations
 
-- Components are fetched without an integrity hash. Planned.
-- CLI does not support `--dry-run` or `diff` against existing files. Planned.
+- CLI does not provide a diff against existing files.
+- Registry checksums are not signed or pinned to a user-managed trusted key.
 - The MCP server returns registry strings as-is without content filtering. Agents must apply their own trust boundaries.
 
 ## Supported versions
@@ -77,10 +76,10 @@ Security fixes land on the current `0.0.x` line for each package. Older versions
 
 | Package | Current line |
 | :-- | :-- |
-| `frakment` | `0.0.4` |
-| `@frakment/ai` | `0.0.4` |
-| `@frakment/react` | `0.0.2` |
-| `@frakment/mcp` | `0.0.2` |
+| `frakment` | `0.0.6` |
+| `@frakment/ai` | `0.0.5` |
+| `@frakment/react` | `0.0.3` |
+| `@frakment/mcp` | `0.0.3` |
 
 ## Recognition
 

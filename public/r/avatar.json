@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -49,5 +48,6 @@
   "name": "avatar",
   "registryDependencies": [],
   "title": "Avatar",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:d88501ebe3164bb8f8bf120e54029aa8ee49d9eff7fdb8f4ffbf19b71e7027cc"
 }

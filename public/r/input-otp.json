@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "input-otp",
     "input-otp@^1.5.0",
-    "lucide-react",
     "lucide-react@^1.69.0"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "input-otp",
   "registryDependencies": [],
   "title": "Input OTP",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:e16eb6985dcf8494b891d5e30c38a1bd0cd4abc82168433d10202423028cef63"
 }

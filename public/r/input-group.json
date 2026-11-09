@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1"
   ],
   "deprecated": false,
@@ -18,5 +17,6 @@
     "textarea"
   ],
   "title": "Input Group",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:dbc8898626b3228d1646a51fc0241e3c444cb1f71c7b52e16a1d4eacc32e783c"
 }

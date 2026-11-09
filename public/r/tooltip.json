@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "tooltip",
   "registryDependencies": [],
   "title": "Tooltip",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:336ab4123844f50c6867405018a507f50557387da6720630e79af3151d742481"
 }

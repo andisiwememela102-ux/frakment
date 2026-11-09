@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "dropdown-menu",
   "registryDependencies": [],
   "title": "Dropdown Menu",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:9d426b7d4cd1a5c365f4e11c89efd58f6871ca8d974424385386a3b0cc96dc1f"
 }

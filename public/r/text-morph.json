@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "@number-flow/react",
     "@number-flow/react@^0.6.2",
-    "motion",
     "motion@^14.9.0"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "text-morph",
   "registryDependencies": [],
   "title": "Text Morph",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:5b457478dd5a2c009fd2c83af1e88ac4d25f79938129c85323d8d9e2bc6630e9"
 }

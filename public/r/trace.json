@@ -1,10 +1,7 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "motion",
     "motion@^14.9.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -20,5 +17,6 @@
     "shimmer"
   ],
   "title": "Trace",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:f9bf6e9ba028a270246b8c178344fd5704864b73fbccc427d70ed068e58ab104"
 }

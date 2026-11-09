@@ -4,12 +4,16 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+permissions:
+  contents: read
+
 jobs:
   dco:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
+          persist-credentials: false
       - name: Check Signed-off-by on all commits
-        uses: tim-actions/dco@master
+        uses: tim-actions/dco@f2279e6e62d5a7d9115b0cb8e837b777b1b02e21

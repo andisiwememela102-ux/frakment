@@ -11,5 +11,6 @@
   "name": "input",
   "registryDependencies": [],
   "title": "Input",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:6fc6ab1112e63978a78f955accec383d240708b25c4f1251b4a9f8f7e75923d2"
 }

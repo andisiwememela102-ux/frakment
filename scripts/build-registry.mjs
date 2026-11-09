@@ -18,6 +18,33 @@ function normalizePackage(spec) {
   return spec.split("/")[0];
 }
 
+function packageName(spec) {
+  if (spec.startsWith("@")) {
+    const versionSeparator = spec.indexOf("@", 1);
+    return versionSeparator > 0 ? spec.slice(0, versionSeparator) : spec;
+  }
+  return spec.split("@")[0];
+}
+
+function canonicalize(value) {
+  if (Array.isArray(value)) {
+    return `[${value.map(canonicalize).join(",")}]`;
+  }
+  if (value && typeof value === "object") {
+    return `{${Object.keys(value)
+      .sort()
+      .map((key) => `${JSON.stringify(key)}:${canonicalize(value[key])}`)
+      .join(",")}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function createIntegrity(payload) {
+  return `sha256:${createHash("sha256")
+    .update(canonicalize(payload), "utf8")
+    .digest("hex")}`;
+}
+
 function detectImports(src) {
   const external = new Set();
   const registry = new Set();
@@ -153,8 +180,17 @@ async function main() {
     autoRegistry.delete(component.name);
 
     // merge: auto-detect (dari kode) ∪ manual (dari manifest)
+    const manualDependencies = component.dependencies ?? [];
+    const manualPackageNames = new Set(
+      manualDependencies.map(packageName)
+    );
     const dependencies = [
-      ...new Set([...autoExternal, ...(component.dependencies ?? [])]),
+      ...new Set([
+        ...[...autoExternal].filter(
+          (dependency) => !manualPackageNames.has(packageName(dependency))
+        ),
+        ...manualDependencies,
+      ]),
     ].sort();
     const registryDependencies = [
       ...new Set([...autoRegistry, ...(component.registryDependencies ?? [])]),
@@ -184,6 +220,7 @@ async function main() {
       title: component.title,
       version: component.version ?? "0.0.0",
     };
+    payload.integrity = createIntegrity(payload);
 
     const outPath = path.join(outputDir, `${component.name}.json`);
     await fs.writeFile(outPath, JSON.stringify(payload, null, 2));

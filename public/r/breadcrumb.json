@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "breadcrumb",
   "registryDependencies": [],
   "title": "Breadcrumb",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:e0a19938ccf35992504a53b564f22c854d485067d386e33da28e4405a7008aee"
 }

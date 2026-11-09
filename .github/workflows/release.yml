@@ -16,18 +16,19 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v4
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: 22
           cache: npm
           registry-url: https://registry.npmjs.org
-      - run: npm install -g npm@latest
+      - run: npm install -g npm@11.11.0
       - run: npm ci
       - name: Create Release PR or Publish
-        uses: changesets/action@v1
+        uses: changesets/action@ae5c373a18fe02dac7d40bcbc0184758c90d94d2
         with:
           publish: npm run release
           version: npm run version:packages
@@ -36,24 +37,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
-      - name: Ensure all version tags and releases exist
-        if: always()
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for pkg in packages/*/package.json; do
-            name=$(node -p "require('./$pkg').name")
-            version=$(node -p "require('./$pkg').version")
-            tag="${name}@${version}"
-            if ! git rev-parse "$tag" >/dev/null 2>&1; then
-              git tag -a "$tag" -m "$tag"
-              git push origin "$tag" || true
-            fi
-            if ! gh release view "$tag" >/dev/null 2>&1; then
-              latest_flag="--latest=false"
-              if [ "$name" = "frakment" ]; then latest_flag="--latest"; fi
-              gh release create "$tag" --title "$tag" --notes "Automated release for $tag" --verify-tag $latest_flag || true
-            fi
-          done

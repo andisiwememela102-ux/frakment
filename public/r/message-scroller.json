@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "@frakment/react",
     "@frakment/react@^0.0.2",
-    "lucide-react",
     "lucide-react@^1.69.0"
   ],
   "deprecated": false,
@@ -18,5 +16,6 @@
     "button"
   ],
   "title": "Message Scroller",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:c80d57116829a22f4f1474bd8afbb5cdedf31f20728e0fe3ba47fdc8c194037d"
 }

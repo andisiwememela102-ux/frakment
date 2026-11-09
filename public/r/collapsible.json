@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "motion",
     "motion@^14.9.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "collapsible",
   "registryDependencies": [],
   "title": "Collapsible",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:f9748ffc784666bd71456c9cfdd938f1db963df181b897df7b97f7cf952fb673"
 }

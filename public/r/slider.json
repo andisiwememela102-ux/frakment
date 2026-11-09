@@ -1,6 +1,5 @@
 {
   "dependencies": [
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -14,5 +13,6 @@
   "name": "slider",
   "registryDependencies": [],
   "title": "Slider",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:df36edc8f1220ebf4783730f2383effde6c0d41874b5b78ffa2c586fbb6b6acc"
 }

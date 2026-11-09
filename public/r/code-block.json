@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "lucide-react",
     "lucide-react@^1.69.0"
   ],
   "deprecated": false,
@@ -18,5 +16,6 @@
     "button"
   ],
   "title": "Code Block",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:0f760e3c27376742a60e75ee1d2c8a26078acab75ce0c270902f499bce6dc4e3"
 }

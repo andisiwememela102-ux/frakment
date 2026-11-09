@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "bubble",
   "registryDependencies": [],
   "title": "Bubble",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:137228d3054f012be2708c43e8fe5d820068761e40cf0f80b10f7382706aaaf4"
 }

@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "class-variance-authority",
     "class-variance-authority@^0.7.1",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "badge",
   "registryDependencies": [],
   "title": "Badge",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:7aa519a145ac0657b5ae4382e54a11eff4a55b9d18afb6811b40563310af110c"
 }

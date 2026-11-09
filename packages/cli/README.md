@@ -58,6 +58,9 @@ Flags:
 - `--registry <url>` — override the registry URL (default: from `components.json`)
 - `--overwrite` — overwrite existing files without prompting
 
+- `--dry-run` â€” show planned file and dependency changes without changing the project
+- `--skip-dependencies` â€” write component files without installing missing npm dependencies
+
 ### `frakment list`
 
 ```bash

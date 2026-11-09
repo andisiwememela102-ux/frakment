@@ -1,8 +1,6 @@
 {
   "dependencies": [
-    "lucide-react",
     "lucide-react@^1.69.0",
-    "radix-ui",
     "radix-ui@^1.8.1"
   ],
   "deprecated": false,
@@ -16,5 +14,6 @@
   "name": "checkbox",
   "registryDependencies": [],
   "title": "Checkbox",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "integrity": "sha256:a6bab13366a25e3eba538476b2599577596f0bebcf859a3dacf269f247e19c42"
 }
