@@ -2,6 +2,17 @@
 
 Thanks for contributing. This guide covers the docs style, the changelog policy, and the review workflow.
 
+## Scope
+
+This repository is **product only**. Use whatever tooling you prefer -
+AI assistants, editors, linters, local automation. We do not police your
+stack. Pull requests are judged by their content, not by how they were
+produced.
+
+**Do not clutter the repo with non-product files.** Editor config
+(`.cursor/`, `CLAUDE.md`, `.claude/`), personal notes, and temporary
+experiments belong in your local environment or your fork.
+
 ## Ground rules
 
 - **Shipped state only.** Docs describe what exists and works in the current `main`. No roadmap, no milestones, no "planned", no "in development", no "coming soon".
@@ -185,7 +196,7 @@ Run this whenever the homepage layout, hero copy, or theme changes. Commit both 
 - [ ] `<ComponentPreview>` renders a working demo.
 - [ ] Changelog entry exists if the change is user-facing in a package.
 - [ ] No internal detail (paths, tooling, roadmap, temporary files).
-- [ ] No mentions of internal AI tooling, admin notes, or scratch files.
+- [ ] Commit contains only product content - nothing that would clutter the repo for end users browsing the source.
 - [ ] All checks pass.
 
 ## Adding a new docs section
