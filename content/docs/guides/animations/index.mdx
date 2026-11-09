@@ -34,13 +34,13 @@ Run `npx frakment add <name>` once and every dependency in that row is installed
 `lib/animation.ts` is created by `npx frakment init`. Import from it when you build your own animated components so timing matches the rest of the library.
 
 ~~~ts
-import { SPRING_SMOOTH, EASE_OUT, EASE_SMOOTH, DURATION_SMOOTH } from "@/lib/animation";
+import { springSoft, easeOutExpo, easeSmoothOut, durationSlow } from "@/lib/animation";
 ~~~
 
-- **SPRING_SMOOTH** — `{ stiffness: 200, damping: 30 }`. Use for expand and collapse that should settle without bounce.
-- **EASE_OUT** — `[0.16, 1, 0.3, 1]`. Use for entrances that decelerate.
-- **EASE_SMOOTH** — `[0.32, 0.72, 0, 1]`. Default for Frakment height transitions.
-- **DURATION_SMOOTH** — `0.45` seconds. Pair with `EASE_SMOOTH`.
+- **springSoft** — `{ stiffness: 200, damping: 30 }`. Use for expand and collapse that should settle without bounce.
+- **easeOutExpo** — `[0.16, 1, 0.3, 1]`. Use for entrances that decelerate.
+- **easeSmoothOut** — `[0.32, 0.72, 0, 1]`. Default for Frakment height transitions.
+- **durationSlow** — `0.45` seconds. Pair with `easeSmoothOut`.
 
 ## Shimmer
 

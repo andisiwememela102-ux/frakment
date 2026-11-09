@@ -6,7 +6,7 @@ import { Collapsible as CollapsiblePrimitive } from "radix-ui";
 import * as React from "react";
 
 import { Shimmer } from "@/components/ui/shimmer";
-import { SPRING_SMOOTH } from "@/lib/animation";
+import { springSoft } from "@/lib/animation";
 import { cn } from "@/lib/utils";
 
 const TraceCollapsibleContext = React.createContext<{ open: boolean }>({
@@ -248,7 +248,7 @@ function TraceCollapsibleContent({
           shouldReduce
             ? { duration: 0 }
             : {
-                height: SPRING_SMOOTH,
+                height: springSoft,
                 opacity: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
               }
         }

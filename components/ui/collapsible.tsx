@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { Collapsible as CollapsiblePrimitive } from "radix-ui";
 import * as React from "react";
 
-import { DURATION_SMOOTH, EASE_SMOOTH } from "@/lib/animation";
+import { durationSlow, easeSmoothOut } from "@/lib/animation";
 import { cn } from "@/lib/utils";
 
 function Collapsible({
@@ -52,7 +52,7 @@ function CollapsibleContent({
           className="w-full overflow-hidden"
           data-slot="collapsible-content"
           initial={false}
-          transition={{ duration: DURATION_SMOOTH, ease: EASE_SMOOTH }}
+          transition={{ duration: durationSlow, ease: easeSmoothOut }}
         >
           <div className={cn("w-full", className)}>{children}</div>
         </motion.div>

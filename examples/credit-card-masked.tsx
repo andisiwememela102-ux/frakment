@@ -1,0 +1,39 @@
+﻿import {
+  CreditCard,
+  CreditCardBrand,
+  CreditCardExpiry,
+  CreditCardFooter,
+  CreditCardHeader,
+  CreditCardHolder,
+  CreditCardIssuer,
+  CreditCardNumber,
+} from "@/components/ui/credit-card";
+
+export function CreditCardMasked() {
+  return (
+    <div className="grid gap-4">
+      <CreditCard>
+        <CreditCardHeader>
+          <CreditCardIssuer />
+          <CreditCardBrand brand="visa" />
+        </CreditCardHeader>
+        <CreditCardNumber value="4242424242424242" />
+        <CreditCardFooter>
+          <CreditCardHolder value="John Doe" />
+          <CreditCardExpiry value="1228" />
+        </CreditCardFooter>
+      </CreditCard>
+      <CreditCard>
+        <CreditCardHeader>
+          <CreditCardIssuer />
+          <CreditCardBrand brand="visa" />
+        </CreditCardHeader>
+        <CreditCardNumber masked value="4242424242424242" />
+        <CreditCardFooter>
+          <CreditCardHolder value="John Doe" />
+          <CreditCardExpiry value="1228" />
+        </CreditCardFooter>
+      </CreditCard>
+    </div>
+  );
+}

@@ -4,7 +4,7 @@ import { ChevronDownIcon } from "lucide-react";
 import { motion } from "motion/react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import * as React from "react";
-import { DURATION_SMOOTH, EASE_SMOOTH } from "@/lib/animation";
+import { durationSlow, easeSmoothOut } from "@/lib/animation";
 import { cn } from "@/lib/utils";
 
 const Accordion = ({
@@ -73,7 +73,7 @@ const AccordionContent = ({
           data-slot="accordion-content"
           initial={false}
           transition={{
-            height: { duration: DURATION_SMOOTH, ease: EASE_SMOOTH },
+            height: { duration: durationSlow, ease: easeSmoothOut },
             opacity: { duration: 0.2 },
           }}
         >

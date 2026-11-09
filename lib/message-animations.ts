@@ -1,22 +1,22 @@
-import { DURATION_FAST, EASE_OUT } from "@/lib/animation";
+import { durationFast, easeOutExpo } from "@/lib/animation";
 
 export const MESSAGE_ANIMATIONS = {
   fade: {
-    transition: { duration: DURATION_FAST },
+    transition: { duration: durationFast },
     variants: {
       animate: { opacity: 1 },
       initial: { opacity: 0 },
     },
   },
   "slide-up": {
-    transition: { duration: DURATION_FAST + 0.1, ease: EASE_OUT },
+    transition: { duration: durationFast + 0.1, ease: easeOutExpo },
     variants: {
       animate: { opacity: 1, y: 0 },
       initial: { opacity: 0, y: 8 },
     },
   },
   "slide-up-slow": {
-    transition: { duration: 0.32, ease: EASE_OUT },
+    transition: { duration: 0.32, ease: easeOutExpo },
     variants: {
       animate: { opacity: 1, y: 0 },
       initial: { opacity: 0, y: 12 },

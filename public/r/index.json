@@ -321,6 +321,13 @@
       "name": "sheet",
       "title": "Sheet",
       "version": "0.0.0"
+    },
+    {
+      "deprecated": false,
+      "description": "A monochrome credit card display with three variants.",
+      "name": "credit-card",
+      "title": "Credit Card",
+      "version": "0.0.0"
     }
   ],
   "homepage": "https://github.com/arrafipd/frakment",
