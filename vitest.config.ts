@@ -27,6 +27,7 @@ export default defineConfig({
     exclude: ["**/node_modules/**", "**/.next/**", "**/dist/**", "**/e2e/**"],
     globals: true,
     include: ["**/*.{test,spec}.{ts,tsx}"],
+    pool: "vmThreads",
     setupFiles: ["./vitest.setup.ts"],
   },
 });
