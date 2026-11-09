@@ -20,7 +20,7 @@
     "dev": "next dev",
     "fix": "ultracite fix",
     "postinstall": "fumadocs-mdx",
-    "prepare": "lefthook install",
+    "prepare": "node scripts/install-hooks.mjs",
     "registry:audit": "node scripts/audit-registry.mjs",
     "registry:build": "node scripts/build-registry.mjs",
     "registry:validate": "node scripts/validate-manifest.mjs",
