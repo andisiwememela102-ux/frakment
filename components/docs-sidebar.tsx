@@ -17,7 +17,7 @@ import {
 // Both render TOP_LEVEL_SECTIONS (flat) + tree.children grouped, filtered by
 // EXCLUDED_SECTIONS. If you change one, change the other — or better, hoist
 // the shared logic into a helper.
-import { buildNavGroups } from "@/lib/docs";
+import { buildNavGroups, PAGES_NEW } from "@/lib/docs";
 import type { source } from "@/lib/source";
 
 const MENU_BUTTON_CLS =
@@ -29,7 +29,7 @@ const SidebarPageGroup = ({
   pathname,
 }: {
   label: React.ReactNode;
-  pages: { url: string; name: React.ReactNode }[];
+  pages: { url: string; name: React.ReactNode; isNew?: boolean }[];
   pathname: string;
 }) => {
   if (pages.length === 0) {
@@ -50,9 +50,15 @@ const SidebarPageGroup = ({
                 className={MENU_BUTTON_CLS}
                 isActive={page.url === pathname}
               >
-                <Link href={page.url}>
+                <Link className="flex items-center gap-1.5" href={page.url}>
                   <span className="absolute inset-0 flex w-(--sidebar-menu-width) bg-transparent" />
                   {page.name}
+                  {page.isNew ? (
+                    <span
+                      aria-label="New"
+                      className="size-1.5 shrink-0 rounded-full bg-blue-500 dark:bg-blue-400"
+                    />
+                  ) : null}
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
@@ -84,7 +90,11 @@ export const DocsSidebar = ({
           <SidebarPageGroup
             key={group.label}
             label={group.label}
-            pages={group.items.map((i) => ({ name: i.name, url: i.href }))}
+            pages={group.items.map((i) => ({
+              isNew: PAGES_NEW.has(i.href),
+              name: i.name,
+              url: i.href,
+            }))}
             pathname={pathname}
           />
         ))}

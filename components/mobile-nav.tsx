@@ -19,7 +19,7 @@ import { useFeedback } from "@/hooks/use-feedback";
 // Both render TOP_LEVEL_SECTIONS (flat) + tree.children grouped, filtered by
 // EXCLUDED_SECTIONS. If you change one, change the other - or better, hoist
 // the shared logic into a helper.
-import { buildNavGroups } from "@/lib/docs";
+import { buildNavGroups, PAGES_NEW } from "@/lib/docs";
 import { cn } from "@/lib/utils";
 
 const MobileLink = ({
@@ -60,7 +60,7 @@ const MobileNavGroup = ({
   setOpen,
 }: {
   label: React.ReactNode;
-  pages: { url: string; name: React.ReactNode }[];
+  pages: { url: string; name: React.ReactNode; isNew?: boolean }[];
   setOpen: (open: boolean) => void;
 }) => {
   if (pages.length === 0) {
@@ -72,7 +72,15 @@ const MobileNavGroup = ({
       <div className="flex flex-col gap-3">
         {pages.map((page) => (
           <MobileLink href={page.url} key={page.url} onOpenChange={setOpen}>
-            {page.name}
+            <span className="inline-flex items-center gap-2">
+              {page.name}
+              {page.isNew ? (
+                <span
+                  aria-label="New"
+                  className="size-2 shrink-0 rounded-full bg-blue-500 dark:bg-blue-400"
+                />
+              ) : null}
+            </span>
           </MobileLink>
         ))}
       </div>
@@ -172,7 +180,11 @@ export const MobileNav = ({
             <MobileNavGroup
               key={group.label}
               label={group.label}
-              pages={group.items.map((i) => ({ name: i.name, url: i.href }))}
+              pages={group.items.map((i) => ({
+                isNew: PAGES_NEW.has(i.href),
+                name: i.name,
+                url: i.href,
+              }))}
               setOpen={setOpen}
             />
           ))}

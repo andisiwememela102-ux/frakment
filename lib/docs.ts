@@ -71,17 +71,7 @@ export const docsImageRoute = `${ROUTES.OG}${ROUTES.DOCS}`;
 // Add the URL here when releasing a new component or page; remove once it
 // graduates from "new". Single source of truth for the "new" indicator.
 export const PAGES_NEW: ReadonlySet<string> = new Set([
-  "/docs/ai-elements/plan",
-  "/docs/ai-elements/prompt-input",
-  "/docs/ai-elements/queue",
-  "/docs/ai-elements/reasoning",
-  "/docs/ai-elements/sources",
-  "/docs/ai-elements/stack-trace",
-  "/docs/ai-elements/subagent",
-  "/docs/ai-elements/suggestion",
-  "/docs/ai-elements/task",
-  "/docs/ai-elements/test-results",
-  "/docs/ai-elements/tool",
+  "/docs/modules/credit-card",
 ]);
 
 export interface NavItem {
