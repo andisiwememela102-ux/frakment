@@ -16,6 +16,8 @@ import { CopyButton } from "@/components/copy-button";
 import { FileTree, FileTreeFile, FileTreeFolder } from "@/components/file-tree";
 import { getIconForLanguageExtension } from "@/components/icons";
 import { IntroFeatureCard } from "@/components/intro-feature-card";
+import { MotionCurveCustom } from "@/components/motion-curve-custom";
+import { ComponentDefaultsGrid, MotionCurveGrid } from "@/components/motion-curve-grid";
 import { PropsTable } from "@/components/props-table";
 import {
   Accordion,
@@ -75,6 +77,9 @@ export const mdxComponents = {
   ),
   BrandColorSwatch,
   Button,
+  ComponentDefaultsGrid,
+  MotionCurveCustom,
+  MotionCurveGrid,
   blockquote: ({ className, ...props }: React.ComponentProps<"blockquote">) => (
     <blockquote
       className={cn("border-border mt-6 border-l-4 pl-6 italic", className)}
