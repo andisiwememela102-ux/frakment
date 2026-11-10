@@ -1,4 +1,6 @@
-﻿import {
+"use client";
+
+import {
   SiAmericanexpress,
   SiDinersclub,
   SiDiscover,
@@ -7,8 +9,10 @@
   SiVisa,
 } from "@icons-pack/react-simple-icons";
 import { cva, type VariantProps } from "class-variance-authority";
+import { motion } from "motion/react";
 import type * as React from "react";
 import { FrakmentMark } from "@/components/brand";
+import { delayTight, durationSlow, easeInOutQuad } from "@/lib/animation";
 import { cn } from "@/lib/utils";
 
 type CardBrand = "mastercard" | "visa" | "amex" | "discover" | "jcb" | "diners";
@@ -135,11 +139,14 @@ function CreditCardHeader({
 function CreditCardIssuer({
   className,
   children,
+  logo,
   ...props
-}: React.ComponentProps<"div">) {
+}: React.ComponentProps<"div"> & {
+  logo?: React.ReactNode;
+}) {
   return (
     <div className={cn("flex items-center", className)} {...props}>
-      {children ?? <FrakmentMark className="size-5 sm:size-6" />}
+      {children ?? logo ?? <FrakmentMark className="size-5 sm:size-6" />}
     </div>
   );
 }
@@ -161,23 +168,81 @@ function CreditCardNumber({
   className,
   value,
   brand,
-  masked,
+  masked = false,
+  animation = true,
+  duration = durationSlow,
+  stagger = delayTight,
   ...props
 }: React.ComponentProps<"p"> & {
   value: string;
   brand?: CardBrand;
   masked?: boolean;
+  animation?: boolean;
+  duration?: number;
+  stagger?: number;
 }) {
   const resolvedBrand = brand ?? detectBrand(value);
+  const fullText = formatCardNumber(value, resolvedBrand, false);
+  const maskedText = formatCardNumber(value, resolvedBrand, true);
+  const displayText = masked ? maskedText : fullText;
+  const baseClass = cn(
+    "overflow-hidden font-mono text-sm tracking-[0.1em] whitespace-nowrap tabular-nums sm:text-lg sm:tracking-[0.15em]",
+    className
+  );
+
+  if (!animation) {
+    return (
+      <p className={baseClass} {...props}>
+        {displayText}
+      </p>
+    );
+  }
+
+  const maxLen = Math.max(fullText.length, maskedText.length);
+  const chars: React.ReactNode[] = [];
+  for (let i = 0; i < maxLen; i++) {
+    const fullChar = fullText[i] ?? " ";
+    const maskedChar = maskedText[i] ?? " ";
+    const isSpace = fullChar === " " && maskedChar === " ";
+    const delay = i * stagger;
+    chars.push(
+      <span
+        className="relative inline-flex h-[1.2em] w-[1ch] items-center justify-center"
+        key={i}
+      >
+        <motion.span
+          animate={{
+            filter: masked ? "blur(6px)" : "blur(0px)",
+            opacity: masked ? 0 : 1,
+            scale: masked ? 0.15 : 1,
+          }}
+          className="absolute inset-0 flex items-center justify-center will-change-transform"
+          initial={false}
+          transition={{ delay, duration, ease: easeInOutQuad }}
+        >
+          {isSpace ? "\u00A0" : fullChar}
+        </motion.span>
+        <motion.span
+          animate={{
+            filter: masked ? "blur(0px)" : "blur(6px)",
+            opacity: masked ? 1 : 0,
+            scale: masked ? 1 : 0.15,
+          }}
+          className="absolute inset-0 flex items-center justify-center will-change-transform"
+          initial={false}
+          transition={{ delay, duration, ease: easeInOutQuad }}
+        >
+          {isSpace ? "\u00A0" : maskedChar}
+        </motion.span>
+      </span>
+    );
+  }
+
   return (
-    <p
-      className={cn(
-        "overflow-hidden font-mono text-sm tracking-[0.1em] whitespace-nowrap tabular-nums sm:text-lg sm:tracking-[0.15em]",
-        className
-      )}
-      {...props}
-    >
-      {formatCardNumber(value, resolvedBrand, masked)}
+    <p aria-label={displayText} className={baseClass} {...props}>
+      <span aria-hidden="true" className="inline-flex">
+        {chars}
+      </span>
     </p>
   );
 }

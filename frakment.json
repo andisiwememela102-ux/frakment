@@ -516,7 +516,8 @@
       "target": "components/ui/credit-card.tsx",
       "dependencies": [
         "class-variance-authority@^0.7.1",
-        "@icons-pack/react-simple-icons@^13.15.1"
+        "@icons-pack/react-simple-icons@^13.15.1",
+        "motion@^14.9.0"
       ],
       "registryDependencies": [],
       "type": "registry:ui"
