@@ -9,6 +9,7 @@ import { AccordionMultiple } from "@/examples/accordion-multiple";
 import { AccordionDisabled } from "@/examples/accordion-disabled";
 import { AccordionBorders } from "@/examples/accordion-borders";
 import { AccordionCard } from "@/examples/accordion-card";
+import { AnimationDemo } from "@/examples/animation-demo";
 
 <ComponentPreview name="accordion" title="accordion.tsx">
   <AccordionDemo />
@@ -146,6 +147,38 @@ Nest an accordion inside a card for grouped, framed content.
   </Accordion>
 </ComponentPreview>
 
+## Animation
+
+Accordion accepts an `animation` prop on the root, inherited by every content item. Pass a per-item override on `AccordionContent` to diverge from the root setting.
+
+<ComponentPreview name="accordion" title="animation-demo.tsx" src="examples/animation-demo.tsx" previewClassName="h-auto py-8">
+  <AnimationDemo />
+</ComponentPreview>
+
+The prop takes a compact string DSL.
+
+| Form | Example |
+| :-- | :-- |
+| Named easing | `"easeInOut"`, `"easeOutExpo"`, `"easeSmoothOut"` |
+| Named easing + duration | `"easeInOut 300ms"`, `"easeOutExpo 0.5"` |
+| Custom curve | `"cubic-bezier(0.4, 0, 0.2, 1) 300ms"` |
+| Spring | `"spring(300, 25)"` |
+| Inertia | `"inertia(0.2, 400)"` |
+| Keyframes | `"keyframes([0, 1.2, 1], [0, 0.5, 1]) 500ms"` |
+
+Any form supports `delay(...)` and `repeat(n | infinite)`. Pass `animation={false}` to disable the reveal animation.
+
+```tsx
+<Accordion animation="spring(300, 25)" collapsible type="single">
+  <AccordionItem value="a">
+    <AccordionTrigger>Question</AccordionTrigger>
+    <AccordionContent animation="easeInOut 200ms">
+      Per-item override.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
 ## API Reference
 
 ### Accordion
@@ -173,6 +206,11 @@ Nest an accordion inside a card for grouped, framed content.
       type: "boolean",
       default: "false",
       description: "Prevent all interaction.",
+    },
+    {
+      name: "animation",
+      type: "false | string",
+      description: "Motion DSL string controlling the open/close reveal. Accepts named easings, cubic-bezier, spring, inertia, keyframes, and delay/repeat options. Pass false to disable.",
     },
   ]}
 />
@@ -236,4 +274,5 @@ const [value, setValue] = React.useState("item-1")
 
 - [Collapsible](/docs/components/collapsible) — single expandable panel
 - [Tabs](/docs/components/tabs) — content panes
+
 

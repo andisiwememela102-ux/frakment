@@ -1,0 +1,70 @@
+---
+title: "November 11, 2026"
+description: "Animation DSL prop for Accordion."
+date: "2026-11-11"
+---
+
+import { AnimationDemo } from "@/examples/animation-demo";
+
+Adds an `animation` prop to **Accordion**. Pass a string DSL to control the reveal transition without importing `motion` directly.
+
+### Animation
+
+<ComponentPreview name="accordion" title="animation-demo.tsx" src="examples/animation-demo.tsx" previewClassName="h-auto py-8">
+  <AnimationDemo />
+</ComponentPreview>
+
+Accordion now accepts `animation`, a compact string that maps to Motion transition options.
+
+```tsx
+<Accordion animation="spring(300, 25)" collapsible type="single">
+  ...
+</Accordion>
+```
+
+Accepted forms:
+
+| Form | Example |
+| :-- | :-- |
+| Named easing | `"easeInOut"`, `"easeOutExpo"` |
+| Named easing + duration | `"easeInOut 300ms"` |
+| Custom curve | `"cubic-bezier(0.4, 0, 0.2, 1) 300ms"` |
+| Spring | `"spring(300, 25)"` |
+| Inertia | `"inertia(0.2, 400)"` |
+| Keyframes | `"keyframes([0, 1.2, 1], [0, 0.5, 1]) 500ms"` |
+
+Any form supports `delay(...)` and `repeat(n | infinite)`. Pass `animation={false}` to disable.
+
+Parsed by `lib/motion-dsl.ts`, scaffolded on `frakment init`.
+
+#### Installation
+
+<Steps>
+  <Step>Install Accordion</Step>
+
+```bash
+npx frakment add accordion
+```
+
+  <Step>Use it with an animation</Step>
+
+```tsx
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+<Accordion animation="spring(300, 25)" collapsible type="single">
+  <AccordionItem value="a">
+    <AccordionTrigger>Question</AccordionTrigger>
+    <AccordionContent>Answer</AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+
+</Steps>
+
+See the [Accordion docs](/docs/components/accordion#animation) for the full syntax and per-item override.
+

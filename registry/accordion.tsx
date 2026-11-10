@@ -1,16 +1,26 @@
 "use client";
 
 import { ChevronDownIcon } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import * as React from "react";
 import { durationSlow, easeSmoothOut } from "@/lib/animation";
+import { parseAnimation } from "@/lib/motion-dsl";
 import { cn } from "@/lib/utils";
 
+const AccordionAnimationContext = React.createContext<
+  false | string | undefined
+>(undefined);
+
 const Accordion = ({
+  animation,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Root>) => (
-  <AccordionPrimitive.Root data-slot="accordion" {...props} />
+}: React.ComponentProps<typeof AccordionPrimitive.Root> & {
+  animation?: false | string;
+}) => (
+  <AccordionAnimationContext.Provider value={animation}>
+    <AccordionPrimitive.Root data-slot="accordion" {...props} />
+  </AccordionAnimationContext.Provider>
 );
 
 const AccordionItem = ({
@@ -47,10 +57,17 @@ const AccordionTrigger = ({
 const AccordionContent = ({
   className,
   children,
+  animation: localAnimation,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Content>) => {
+}: React.ComponentProps<typeof AccordionPrimitive.Content> & {
+  animation?: false | string;
+}) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const [open, setOpen] = React.useState(false);
+  const contextAnimation = React.useContext(AccordionAnimationContext);
+  const animation = localAnimation ?? contextAnimation;
+  const anim = React.useMemo(() => parseAnimation(animation), [animation]);
+  const prefersReduced = useReducedMotion();
 
   React.useEffect(() => {
     const el = ref.current;
@@ -64,6 +81,15 @@ const AccordionContent = ({
     return () => observer.disconnect();
   }, []);
 
+  const defaultTransition = {
+    height: { duration: durationSlow, ease: easeSmoothOut },
+    opacity: { duration: 0.2 },
+  };
+  const transition =
+    animation === false || prefersReduced
+      ? { duration: 0 }
+      : (anim?.transition ?? defaultTransition);
+
   return (
     <AccordionPrimitive.Content asChild forceMount {...props}>
       <div className="w-full" ref={ref}>
@@ -72,10 +98,7 @@ const AccordionContent = ({
           className="w-full overflow-hidden text-sm"
           data-slot="accordion-content"
           initial={false}
-          transition={{
-            height: { duration: durationSlow, ease: easeSmoothOut },
-            opacity: { duration: 0.2 },
-          }}
+          transition={transition}
         >
           <div className={cn("pt-0 pb-4", className)}>{children}</div>
         </motion.div>

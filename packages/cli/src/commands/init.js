@@ -157,6 +157,18 @@ export const delayTight = 0.02
     s.succeed("Created 1 file:");
     logger.log("  - lib/animation.ts");
   }
+  if (!existsSync(path.join(cwd, "lib/motion-dsl.ts"))) {
+    const s = ora("Creating lib/motion-dsl.ts").start();
+    await mkdir(path.join(cwd, "lib"), { recursive: true });
+    const motionDsl = await readFile(
+      path.join(TEMPLATES_DIR, "lib/motion-dsl.ts"),
+      "utf-8"
+    );
+    await writeFile(path.join(cwd, "lib/motion-dsl.ts"), motionDsl);
+    s.succeed("Created 1 file:");
+    logger.log("  - lib/motion-dsl.ts");
+  }
+
   const pkgPath = path.join(cwd, "package.json");
   const pkgRaw = await readFile(pkgPath, "utf-8");
   const pkg = JSON.parse(pkgRaw.replace(/^\uFEFF/u, ""));
