@@ -24,10 +24,10 @@ npx frakment@latest init
 npx frakment@latest add button
 ```
 
-- **46 components** across base, AI elements, and modules
+- **47 components** across base primitives, AI chat elements, and utility modules
 - **You own the source** — full code in your repo, fully editable
 - **Accessible by default** — ARIA-first, a11y tested
-- **AI and motion built in** — no extra setup
+- **Motion built in** — consistent transitions and micro-interactions out of the box
 
 **[Documentation](https://www.arrafi.dev/frakment/docs)** · **[Components](https://www.arrafi.dev/frakment/docs/components)** · **[Changelog](https://github.com/arrafipd/frakment/releases)**
 

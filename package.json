@@ -2,6 +2,7 @@
   "name": "@frakment/site",
   "version": "0.0.1",
   "private": true,
+  "description": "A component registry for React. Copy-paste primitives with motion built in. MIT.",
   "license": "MIT",
   "author": "The Frakment Authors (https://github.com/arrafipd/frakment)",
   "type": "module",
@@ -10,7 +11,7 @@
   ],
   "scripts": {
     "assets:generate": "node scripts/generate-assets.mjs",
-    "assets:install": "npm i --no-save ffmpeg-static && npm rebuild ffmpeg-static",
+    "assets:install": "npm i --no-save ffmpeg-static \u0026\u0026 npm rebuild ffmpeg-static",
     "prebuild": "npm run build --workspaces --if-present",
     "build": "cross-env NEXT_WORKER_THREADS=1 next build",
     "changeset": "changeset",
@@ -24,7 +25,7 @@
     "registry:audit": "node scripts/audit-registry.mjs",
     "registry:build": "node scripts/build-registry.mjs",
     "registry:validate": "node scripts/validate-manifest.mjs",
-    "release": "npm run build --workspaces --if-present && changeset publish",
+    "release": "npm run build --workspaces --if-present \u0026\u0026 changeset publish",
     "start": "next start",
     "pretest": "npm run build --workspaces --if-present",
     "test": "vitest run",
@@ -111,7 +112,7 @@
     "vitest-axe": "^0.1.0"
   },
   "engines": {
-    "node": ">=22"
+    "node": "\u003e=22"
   },
   "allowScripts": {
     "esbuild@0.28.2": true,
