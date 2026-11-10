@@ -27,12 +27,8 @@ export const SITE = {
     TWITTER: "@arrafipd",
   },
   DESCRIPTION: {
-    LONG: "Composable, accessible, customizable components with AI and motion built in — nothing to assemble, no wiring, no configuration.",
+    LONG: "Composable, accessible, customizable components with motion built in — nothing to assemble, no wiring, no configuration.",
     SHORT: "The Fragments behind your Design System",
-  },
-  HERO: {
-    BODY: "Composable, accessible, customizable — nothing to assemble. With AI and motion. No wiring. No configuration.",
-    TITLE: "The Fragments behind your Design System.",
   },
   KEYWORDS: [
     "Frakment",
