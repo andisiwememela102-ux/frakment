@@ -152,7 +152,7 @@ npx frakment@latest add x
 
 1. Branch from `main`.
 2. Run `npm ci`.
-3. Make your change. If it ships a component or changes a user-facing package, update the changelog.
+3. Make your change. Adding a component? Follow the [Adding a Component](/docs/advanced/adding-components) checklist — 9 steps, three of which fail silently (registry entry, `meta.json`, `PAGES_NEW`). If you change a user-facing package, update the changelog.
 4. Run `npm run fix`, `npm run check`, `npm run typecheck`, `npm test`.
 5. Sign off your commits with `git commit -s` (see [Sign-off](#sign-off-dco) below).
 6. Open a pull request. Required checks must pass before merge.
@@ -198,6 +198,22 @@ Run this whenever the homepage layout, hero copy, or theme changes. Commit both 
 - [ ] No internal detail (paths, tooling, roadmap, temporary files).
 - [ ] Commit contains only product content - nothing that would clutter the repo for end users browsing the source.
 - [ ] All checks pass.
+
+## Adding a new component
+
+See the [Adding a Component](/docs/advanced/adding-components) guide for the full 9-step checklist.
+
+Three steps — `frakment.json` entry, `meta.json` entry, and `PAGES_NEW` in `lib/docs.ts` — fail silently. The component installs and compiles fine, but does not appear in the CLI, sidebar, or new badge if they are missing.
+
+At minimum:
+
+- `registry/<name>.tsx` + `components/ui/<name>.tsx` (identical content)
+- `frakment.json` entry
+- `content/docs/{category}/<name>.mdx` (template above)
+- `content/docs/{category}/meta.json` entry
+- `PAGES_NEW` in `lib/docs.ts`
+- `content/docs/changelog/YYYY-MM-DD.mdx` + `changelog/meta.json`
+- `npm run registry:build`
 
 ## Adding a new docs section
 
