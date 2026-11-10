@@ -20,13 +20,61 @@ experiments belong in your local environment or your fork.
 - **English only.** Docs and changelog are written in English. No mixed-language prose.
 - **Accurate.** If a component is in the registry, its docs page has a working `<ComponentPreview>`. If it is not shipped, it is not documented.
 
+## Code of Conduct
+
+Be respectful, civil, and professional. Harassment, discrimination, and personal attacks are not tolerated. This project follows the [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+
+Report unacceptable behavior to the maintainer via the private channel in [SECURITY.md](./SECURITY.md). Reports are handled confidentially.
+
+## Reporting bugs
+
+Open an issue using the **Bug report** template. Before filing:
+
+- **Search existing issues** and discussions for the same problem.
+- **Upgrade to the latest version** - `npx frakment add <name>` rewrites the file with the newest release.
+- **Reduce to a minimal reproduction** - one component plus the props that trigger the bug.
+
+A bug report includes:
+
+- **Expected** vs **actual** behaviour, in one sentence each.
+- **Steps to reproduce** - one to three numbered steps.
+- **Component and version** - e.g. `button@0.1.0`. Run `npm view frakment version`.
+- **Environment** - React, Tailwind, Node versions; OS; browser.
+- **Minimal code** - a fenced `tsx` block with only the props and children that matter.
+
+Issues filed without the template are closed with a one-line reply asking for it. The template exists so the fix lands in one pass instead of five.
+
+## Requesting features
+
+Open an issue with the **Feature request** template, or start a [Discussion](https://github.com/arrafipd/frakment/discussions) if you are unsure whether the feature belongs in Frakment.
+
+A feature request includes:
+
+- **The problem** - what you are trying to build and where the current API falls short.
+- **The proposal** - what the new prop, component, or behaviour would look like. Sketch the JSX.
+- **Alternatives** - what you tried instead, and why it did not fit.
+- **Scope** - new primitive, variant of an existing one, or composed module?
+
+Features that do not fit Frakment:
+
+- Opinionated brand colors - use the monochrome tokens and a theme.
+- Multi-page routing - use Next.js, Remix, or React Router.
+- Payment, auth, or backend logic - build on top of the primitives.
+
+## Questions
+
+For how-to questions ("how do I use X with Y?"), open a [GitHub Discussion](https://github.com/arrafipd/frakment/discussions). Issues are for actionable bugs and features; discussions are for open-ended answers.
+
+For security issues, do **not** open a public issue. See [SECURITY.md](./SECURITY.md) for the private reporting process.
+
+
 ## Docs style
 
 Rich but simple. One sentence per paragraph. Every component page follows the same shape.
 
 ### Template
 
-```mdx
+````mdx
 ---
 title: "<Component Name>"
 description: "<One sentence: what it does and when to use it.>"
@@ -107,7 +155,7 @@ import { X } from "@/components/ui/x";
 - ARIA roles exposed
 - Keyboard interactions supported
 - Consumer responsibilities
-```
+````
 
 
 ### Reference
@@ -143,7 +191,7 @@ Changelog entries exist **only** for library and package changes that affect use
 
 ### Template
 
-```mdx
+````mdx
 ---
 title: "Month DD, YYYY"
 description: "<One sentence: what shipped.>"
@@ -182,7 +230,7 @@ npx frakment@latest add x
 ```tsx
 <X />
 ```
-```
+````
 
 ### Rules
 
@@ -199,6 +247,54 @@ npx frakment@latest add x
 4. Run `npm run fix`, `npm run check`, `npm run typecheck`, `npm test`.
 5. Sign off your commits with `git commit -s` (see [Sign-off](#sign-off-dco) below).
 6. Open a pull request. Required checks must pass before merge.
+
+## Commit messages
+
+Every commit follows [Conventional Commits](https://www.conventionalcommits.org/). The `commit-msg` hook rejects messages that do not match the pattern.
+
+Format:
+
+```
+<type>(<scope>)!: <subject>
+
+<body>
+
+<footer>
+```
+
+Types:
+
+| Type | Use for |
+| :-- | :-- |
+| `feat` | New component, new prop, new CLI command |
+| `fix` | Bug fix in a component, CLI, or build |
+| `docs` | README, CONTRIBUTING, docs page, changelog |
+| `style` | Formatting, no behaviour change |
+| `refactor` | Restructure without behaviour change |
+| `perf` | Performance improvement |
+| `test` | Add or fix tests |
+| `build` | Build config, package.json, tsconfig |
+| `ci` | GitHub Actions, release workflow |
+| `revert` | Revert a previous commit |
+| `chore` | Version bump, dependency bump |
+
+Rules:
+
+- **Lowercase type**, no period at the end of the subject.
+- **Imperative mood** - `add badge variant`, not `added` or `adds`.
+- **Scope optional**, use the component or package name - `feat(button):`, `fix(cli):`.
+- **`!` after type or scope** marks a breaking change - `feat(animation)!: rename constants`.
+- **Body explains why**, not what. The diff shows what.
+- **`Signed-off-by`** trailer required (see [Sign-off](#sign-off-dco)).
+
+Examples:
+
+- `feat(credit-card): add masked prop with staggered morph`
+- `fix(cli): reject path traversal in add command`
+- `docs: modernize docs template in CONTRIBUTING`
+- `chore(deps): bump motion to 14.10.0`
+- `feat(animation)!: rename constants to camelCase`
+
 
 ## Sign-off (DCO)
 
@@ -270,16 +366,16 @@ Add to `frakment.json` under `components`:
   "registryDependencies": ["button"],
   "type": "registry:ui"
 }
-```n
+```
 `dependencies` must match every external import. `registryDependencies` must match every `@/components/ui/<other>` import. Missing dep = broken install. Extra dep = unnecessary install.
 
 ### 3. Examples
 
-Create `examples/<name>-demo.tsx` with `\"use client\"` at the top. Add variants as separate files when useful.
+Create `examples/<name>-demo.tsx` with `"use client"` at the top. Add variants as separate files when useful.
 
 Rules:
 
-- Always `\"use client\"` if the demo uses state, events, or hooks
+- Always `"use client"` if the demo uses state, events, or hooks
 - Icons from `@/lib/icons`, not directly from `@phosphor-icons/react`
 - Hardcoded props (demos are showcase, not tests)
 - Root wrapper: `max-w-xs` for inputs, `max-w-sm` for forms, `max-w-md` for rich layouts
@@ -296,11 +392,11 @@ The `<ComponentPreview>` `src` prop must point at the example file. Without it, 
 
 ### 5. Sidebar and mobile nav
 
-Add `\"<name>\"` to `content/docs/{category}/meta.json` under `pages`, alphabetically. Without this the page exists at its URL but is not linked from the sidebar, mobile nav, or command menu.
+Add `"<name>"` to `content/docs/{category}/meta.json` under `pages`, alphabetically. Without this the page exists at its URL but is not linked from the sidebar, mobile nav, or command menu.
 
 ### 6. New badge
 
-Add `\"/docs/{category}/<name>\"` to `PAGES_NEW` in `lib/docs.ts`. This drives the blue dot in the sidebar and mobile nav.
+Add `"/docs/{category}/<name>"` to `PAGES_NEW` in `lib/docs.ts`. This drives the blue dot in the sidebar and mobile nav.
 
 `PAGES_NEW` is a rotating batch, not a cumulative list. When you ship a new batch, replace the entire set with only the components from that batch. Entries from the previous batch graduate and their dots disappear.
 
@@ -319,7 +415,7 @@ npm run check
 npm run typecheck
 npm test
 npm run build
-```n
+```
 `registry:build` regenerates `public/r/<name>.json`. Without it, `npx frakment add <name>` returns 404 for users even though the component works locally.
 
 ### 9. Silent failure checklist
